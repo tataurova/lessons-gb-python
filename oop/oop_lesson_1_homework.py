@@ -1,5 +1,4 @@
 import re
-import copy
 
 # 1. Получите текст из файла.
 f = open('text', 'r', encoding='utf-8')
