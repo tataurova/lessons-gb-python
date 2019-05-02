@@ -3,11 +3,16 @@
 import requests
 import json
 
-
 origin = input('Введите название города: ')
-link = "https://www.travelpayouts.com/widgets_suggest_params?q=Из%20"+origin+"%20в%20Лондон"
 
-data = json.loads(requests.get(link).text)
-a = data.get("origin")
-b = a.get("iata")
-print(b)
+
+def f(origin):
+    link = "http://autocomplete.travelpayouts.com/places2?term=" + origin + "&locale=ru&types[]=city"
+    data = json.loads(requests.get(link).text)
+    a = data[0]
+    b = a.get('code')
+    return b
+
+
+print(f(origin))
+
