@@ -5,6 +5,7 @@
 
 import requests
 
+
 def get_link(topic):
     link = f"https://ru.wikipedia.org/wiki/{topic.capitalize()}"
     return link
@@ -20,8 +21,7 @@ def get_topic_page(topic):
     return True
 
 
-
 print(get_link("россия"))
 
-#print(get_topic_page("россия"))
+print(get_topic_page("россия"))
 
