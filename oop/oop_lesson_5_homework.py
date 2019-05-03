@@ -4,9 +4,6 @@
 
 
 class Word:
-    text = None
-    part_of_speech = None
-
     def __init__(self, text, part_of_speech):
         self.text = text
         self.part_of_speech = part_of_speech
@@ -27,27 +24,20 @@ print(w3.text, w3.part_of_speech)
 
 
 class Sentence:
-    content = []
-    words = []
-
     def __init__(self, content, words):
         self.content = content
         self.words = words
 
     def show(self):
-        words = self.words
-        content = self.content
         print("Результат выполнения метода show (составление предложения): ")
-        for i in content:
-            print(f"{words[i-1].text}", end=" ")
+        for i in self.content:
+            print(f"{self.words[i-1].text}", end=" ")
         print('\n')
 
     def show_parts(self):
-        words = self.words
-        content = self.content
         print(f"Результат выполнения метода show_parts (части речи, входящие в предложение):")
-        for i in content:
-            print(f" {words[i-1].part_of_speech}")
+        for i in self.content:
+            print(f" {self.words[i-1].part_of_speech}")
 
 
 my_sent = Sentence([1, 2, 3], [w1, w2, w3])
