@@ -2,6 +2,7 @@ class Bird:
     name = "UN"  # свойство
     distance = 0
     speed = 100
+    __step = 1
 
     def call(self):  # метод call
         this_name = self.name
@@ -10,7 +11,8 @@ class Bird:
     def run(self, distance=False):
         if not distance:
             distance = self.speed
-        self.distance = self.distance + distance
+        self.distance = self.distance + int(distance * (1 + self.__step/10))
+        self.__step += 1
 
     def __init__(self, name, speed, steps):
         self.name = name
