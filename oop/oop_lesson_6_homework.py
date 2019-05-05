@@ -6,8 +6,9 @@
 
 
 class Word:
-    def __init__(self, text):
+    def __init__(self, text, number):
         self.text = text
+        self.number = number
 
 
 class Verb(Word):
@@ -18,9 +19,10 @@ class Noun(Word):
     _gram_char = 'существительное'
 
 
-w1 = Noun('студент')
-w2 = Verb('выполняет')
-w3 = Noun('задания')
+w1 = Noun('студент', 1)
+w2 = Verb('выполняет', 2)
+w3 = Noun('задания', 3)
+w4 = Noun('лишнее', 4)
 
 print(w1.text, w1._gram_char)
 print(w2.text, w2._gram_char)
@@ -41,7 +43,8 @@ class Sentence:
     def show(self):
         print("Результат выполнения метода show (составление предложения): ")
         for i in self.content:
-            print(f"{self.words[i-1].text}", end=" ")
+            if self.words[i-1].number == i:
+                print(f"{self.words[i-1].text}", end=" ")
         print('\n')
 
     def show_parts(self):
@@ -50,9 +53,8 @@ class Sentence:
             print(f" {self.words[i-1]._gram_char}")
 
 
-my_sent = Sentence([1, 2, 3], [w1, w2, w3])
+my_sent = Sentence([1, 2, 3], [w1, w2, w3, w4])
 
 my_sent.show()
 my_sent.show_parts()
-
 
