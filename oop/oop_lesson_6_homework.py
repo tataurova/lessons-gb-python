@@ -28,6 +28,7 @@ print(w1.text, w1._gram_char)
 print(w2.text, w2._gram_char)
 print(w3.text, w3._gram_char)
 
+
 # из 5 урока
 # 4. Создайте класс Sentence
 # 5. Добавьте свойство content, равное списку, состоящему из номеров слов, входящих в предложение.
@@ -43,18 +44,18 @@ class Sentence:
     def show(self):
         print("Результат выполнения метода show (составление предложения): ")
         for i in self.content:
-            if self.words[i-1].number == i:
-                print(f"{self.words[i-1].text}", end=" ")
+            for k in range(len(self.words)):
+                if self.words[k - 1].number == i:
+                    print(f"{self.words[k - 1].text}", end=" ")
         print('\n')
 
     def show_parts(self):
         print(f"Результат выполнения метода show_parts (части речи, входящие в предложение):")
         for i in self.content:
-            print(f" {self.words[i-1]._gram_char}")
+            print(f" {self.words[i - 1]._gram_char}")
 
 
-my_sent = Sentence([1, 2, 3], [w1, w2, w3, w4])
+my_sent = Sentence([1, 2, 3], [w4, w3, w2, w1])
 
 my_sent.show()
 my_sent.show_parts()
-
