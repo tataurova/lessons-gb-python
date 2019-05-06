@@ -52,7 +52,9 @@ class Sentence:
     def show_parts(self):
         print(f"Результат выполнения метода show_parts (части речи, входящие в предложение):")
         for i in self.content:
-            print(f" {self.words[i - 1]._gram_char}")
+            for k in range(len(self.words)):
+                if self.words[k - 1].number == i:
+                    print(f" {self.words[k - 1]._gram_char}")
 
 
 my_sent = Sentence([1, 2, 3], [w4, w3, w2, w1])
