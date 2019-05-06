@@ -37,7 +37,7 @@ eagle.run()
 print(eagle.distance)
 '''
 owl = Bird("Owl", 150, 3)
-eagle = Bird("Eaglr", 300, 1)
+eagle = Bird("Eagle", 300, 1)
 
 print(owl.name, eagle.name)
 print(owl.distance, eagle.distance)
