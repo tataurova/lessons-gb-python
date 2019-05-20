@@ -19,30 +19,54 @@ b. Создать функцию write_to_csv(), в которую переда�
 
 import csv
 import re
+import glob
+
+os_prod_list = []
+os_name_list = []
+os_code_list = []
+os_type_list = []
+headers = ['Изготовитель ОС', 'Название ОС', 'Код продукта', 'Тип системы']
 
 
-with open('info_1.txt') as f:
-    s = f.read()
-    temp_sys = re.compile("Изготовитель ОС:[\s+\S+]{1,}\n")
-    sys = temp_sys.findall(s)
-    #temp_sys = re.compile("Изготовитель ОС:[\s]{1,}[\s+\w+]{1,}\n")
+def check_string(line, parameter_name):
+    template = "^" + parameter_name + ":"
+    result = re.search(template, line)
+    if "re" in dir(result):
+        return True
 
 
-    print(sys)
-    temp_os = re.compile("Название ОС:[\s+\S+]{1,}\n")
-    #temp_os = re.compile("Название ОС:[\s]{1,}[\s+\w+\d+]{1,}\n")
-    os = temp_os.findall(s)
-    print(os)
-    temp_code = re.compile("Код продукта:[\s+\S+]{1,}\n")
-    code = temp_code.findall(s)
-    print(code)
-    temp_type = re.compile("Тип системы:[\s+\S+]{1,}\n")
-    type = temp_type.findall(s)
-    print(type)
+def get_data():
+    files = glob.glob('*.txt')
 
-    '''
-    os_prod_list =
-    os_name_list =
-    os_code_list =
-    os_type_list =
-'''
+    for file in files:
+        log_file = open(file, mode="r", encoding="windows-1251")
+
+        for line in log_file:
+            if check_string(line, "Изготовитель ОС"):
+                os_prod_list.append(line[34:-1])
+            elif check_string(line, "Название ОС"):
+                os_name_list.append(line[34:-1])
+            elif check_string(line, "Код продукта"):
+                os_code_list.append(line[34:-1])
+            elif check_string(line, "Тип системы"):
+                os_type_list.append(line[34:-1])
+
+        log_file.close()
+
+
+def write_to_csv(file_csv):
+    f_n_writer = csv.writer(file_csv)
+    f_n_writer.writerow(headers)
+
+    get_data()
+
+    for i in range(len(os_prod_list)):
+        current_row = []
+        current_row.append(os_prod_list[i])
+        current_row.append(os_name_list[i])
+        current_row.append(os_code_list[i])
+        current_row.append(os_type_list[i])
+        f_n_writer.writerow(current_row)
+
+
+write_to_csv(open('main_data.csv', 'w'))
