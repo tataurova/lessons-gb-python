@@ -23,9 +23,10 @@ import re
 
 with open('info_1.txt') as f:
     s = f.read()
-    temp_sys = re.compile("Изготовитель ОС:[\s+\S+]{1,}\n")
+    temp_sys = re.compile("^Изготовитель ОС:(.*?)$")
     sys = temp_sys.findall(s)
     #temp_sys = re.compile("Изготовитель ОС:[\s]{1,}[\s+\w+]{1,}\n")
+    print(sys)
 
 
     print(sys)

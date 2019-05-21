@@ -18,10 +18,10 @@ print(case_list.my_func(case_list.my_list2))
 
 # Импорт отдельных функций и переменных:
 
-# from dir import test, create_dir, remove_dir
+# from dir import test.txt, create_dir, remove_dir
 
 # create_dir()
 
 # remove_dir()
 
-# print(test)
+# print(test.txt)
