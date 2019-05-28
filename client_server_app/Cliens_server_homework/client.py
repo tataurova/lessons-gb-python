@@ -2,8 +2,13 @@ from socket import *
 from utils import send_message, get_message, translate_message
 import time
 
-ACCOUNT_NAME = input('Введите Ваше имя: ')
-MESSAGE = input('Введите сообщение, которое хотите отправить серверу: ')
+
+if __name__ == '__main__':
+    ACCOUNT_NAME = input('Введите Ваше имя: ')
+    MESSAGE = input('Введите сообщение, которое хотите отправить серверу: ')
+else:
+    ACCOUNT_NAME = 'test'
+    MESSAGE = 'test message'
 
 
 # сообщение серверу

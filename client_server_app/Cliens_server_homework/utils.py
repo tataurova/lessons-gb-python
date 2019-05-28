@@ -1,4 +1,5 @@
 import json
+from errors import MandatoryKeyError
 
 
 def presence_response(presence_message):
@@ -46,8 +47,11 @@ def get_message(sock):
     return response
 
 
-# разбор ответа от сервера
 def translate_message(response):
+    if not isinstance(response, dict):
+        raise TypeError
+    if 'response' not in response:
+        raise MandatoryKeyError('response')
     return response
 
 
