@@ -1,0 +1,5 @@
+2018-12-13 18:02:52,360 - INFO - args: ({'user': {'account_name': 'Guest'}, 'time': 1544706172.3592544, 'action': 'presence'},) = {'response': 200} - presence_response - __main__
+2018-12-13 18:02:52,376 - INFO - args: ({'user': {'account_name': 'Guest'}, 'time': 1544706172.375265, 'action': 'presence'},) = {'response': 200} - presence_response - __main__
+2018-12-13 18:02:52,376 - INFO - args: ({'user': {'account_name': 'Guest'}, 'time': 1544706172.3762655, 'action': 'presence'},) = {'response': 200} - presence_response - __main__
+2018-12-13 18:02:52,385 - INFO - args: ({'user': {'account_name': 'Guest'}, 'time': 1544706172.3852713, 'action': 'presence'},) = {'response': 200} - presence_response - __main__
+2018-12-13 18:02:52,397 - INFO - args: ({'user': {'account_name': 'Guest'}, 'time': 1544706172.3972793, 'action': 'presence'},) = {'response': 200} - presence_response - __main__

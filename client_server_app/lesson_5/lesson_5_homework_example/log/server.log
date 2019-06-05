@@ -1,0 +1,1 @@
+2018-12-04 22:13:42,773 - INFO - args: ({'time': 1543943622.7728786, 'user': {'account_name': 'Guest'}, 'action': 'presence'}) = {'response': 200} - presence_response - __main__

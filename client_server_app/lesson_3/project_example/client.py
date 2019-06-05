@@ -43,6 +43,7 @@ def create_presence(account_name="Guest"):
     # возвращаем сообщение в виде словаря
     return message
 
+
 # функция разбора ответа сервера
 def translate_message(response):
     """
@@ -70,6 +71,7 @@ def translate_message(response):
         raise ResponseCodeError(code)
     # возвращаем ответ
     return response
+
 
 # ЗАПУСКАЕМ КЛИЕНТА!!!
 if __name__ == '__main__':

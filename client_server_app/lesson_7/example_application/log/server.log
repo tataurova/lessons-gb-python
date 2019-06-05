@@ -1,0 +1,10 @@
+2019-03-02 11:32:46,127 - INFO - args: ({'action': 'presence', 'time': 1551508366.1266696, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 11:32:46,130 - INFO - args: ({'action': 'presence', 'time': 1551508366.1276705, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 11:32:46,131 - INFO - args: ({'action': 'presence', 'time': 1551508366.130673, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 11:32:46,132 - INFO - args: ({'action': 'presence', 'time': 1551508366.1326737, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 11:32:46,156 - INFO - args: ({'action': 'presence', 'time': 1551508366.1556892, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 15:23:56,883 - INFO - args: ({'action': 'presence', 'time': 1551522236.8172336, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 15:23:56,897 - INFO - args: ({'action': 'presence', 'time': 1551522236.8222363, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 15:23:56,908 - INFO - args: ({'action': 'presence', 'time': 1551522236.9072938, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 15:23:56,908 - INFO - args: ({'action': 'presence', 'time': 1551522236.9082956, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 15:23:56,920 - INFO - args: ({'action': 'presence', 'time': 1551522236.9203022, 'user': {'account_name': 'Guest'}},) = {'response': 200} - presence_response - __main__
