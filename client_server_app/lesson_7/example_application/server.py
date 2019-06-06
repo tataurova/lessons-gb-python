@@ -49,7 +49,6 @@ def read_requests(r_clients, all_clients):
     return messages
 
 
-
 def write_responses(messages, w_clients, all_clients):
     """
     Отправка сообщений тем клиентам, которые их ждут
