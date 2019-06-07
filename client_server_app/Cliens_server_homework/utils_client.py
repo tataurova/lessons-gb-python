@@ -8,25 +8,11 @@ def log(func):
 
     def decorated(*args, **kwargs):
         res = func(*args, **kwargs)
-        logger.debug('function {} completed with result {}, with arguments: {}'.format(func.__name__,
-        res, args, kwargs))
+        logger.debug('function {} completed with result {}, with arguments: {}'.format(func.__name__, res, args, kwargs))
         return res
 
     return decorated
-'''
-@log
-def presence_response(presence_message):
 
-    if 'action' in presence_message and \
-        presence_message['action'] == 'presence' and \
-        'time' in presence_message and \
-        'user' in presence_message and \
-        'message' in presence_message and \
-            isinstance(presence_message['time'], str):
-        return {'response': 200}
-    else:
-        return {'response': 400, 'error': 'Не верный запрос'}
-'''
 @log
 def dict_to_bytes(message_dict):
     if isinstance(message_dict, dict):

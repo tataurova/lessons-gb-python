@@ -8,8 +8,7 @@ def log(func):
 
     def decorated(*args, **kwargs):
         res = func(*args, **kwargs)
-        logger.debug('function {} completed with result {}, with arguments: {}'.format(func.__name__,
-        res, args, kwargs))
+        logger.debug('function {} completed with result {}, with arguments: {}'.format(func.__name__, res, args, kwargs))
         return res
 
     return decorated

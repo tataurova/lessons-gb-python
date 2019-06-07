@@ -27,6 +27,7 @@ def create_presence(account_name="Guest"):
         }
        # 'message': MESSAGE
     }
+    print(message)
     return message
 
 
