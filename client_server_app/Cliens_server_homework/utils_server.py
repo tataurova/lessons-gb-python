@@ -19,13 +19,14 @@ def presence_response(presence_message):
 
     if 'action' in presence_message and \
         presence_message['action'] == 'presence' and \
-        'time' in presence_message and \
-        'user' in presence_message and \
-        'message' in presence_message and \
-            isinstance(presence_message['time'], str):
+        'time' in presence_message and isinstance(presence_message['time'], str):
+        #'user' in presence_message
+
         return {'response': 200}
     else:
-        return {'response': 400, 'error': 'Не верный запрос'}
+        return {'response': 900, 'error': 'Неваывфыв верный запрос'}
+
+# 'message' in presence_message and \
 
 @log
 def dict_to_bytes(message_dict):
