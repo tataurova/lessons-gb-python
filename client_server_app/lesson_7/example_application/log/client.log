@@ -774,3 +774,5 @@ Guest'}} - create_presence - __main__
 2019-03-02 15:23:56,908 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
 2019-03-02 15:23:56,920 - INFO - = {'action': 'presence', 'time': 1551522236.9203022, 'user': {'account_name': 'Guest'}} - create_presence - __main__
 2019-03-02 15:23:56,920 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
+2019-06-12 17:39:05,890 - INFO - = {'action': 'presence', 'time': 1560350345.890034, 'user': {'account_name': 'Guest'}} - create_presence - __main__
+2019-06-12 17:39:05,896 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__

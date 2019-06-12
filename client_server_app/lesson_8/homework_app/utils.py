@@ -34,8 +34,6 @@ def bytes_to_dict(message_bytes):
         jmessage = message_bytes.decode(ENCODING)
         # Из json делаем словарь
         message = json.loads(jmessage)
-        #print(message)
-        #message = message.decode('cp866')
         # Если там был словарь
         if isinstance(message, dict):
             # Возвращаем сообщение
@@ -55,7 +53,6 @@ def send_message(sock, message):
     :param message: словарь сообщения
     :return: None
     """
-    print(message)
     # Словарь переводим в байты
     bprescence = dict_to_bytes(message)
     # Отправляем
@@ -70,7 +67,6 @@ def get_message(sock):
     """
     # Получаем байты
     bresponse = sock.recv(1024)
-    print(bresponse)
     # переводим байты в словарь
     response = bytes_to_dict(bresponse)
     # возвращаем словарь
