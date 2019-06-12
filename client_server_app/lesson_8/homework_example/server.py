@@ -66,6 +66,7 @@ def write_responses(messages):
                 sock = names[to]
                 msg = message['message']
                 send_message(sock, message)
+
 @log
 def presence_response(presence_message):
     """

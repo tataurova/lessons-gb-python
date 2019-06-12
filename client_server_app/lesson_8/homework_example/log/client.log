@@ -932,3 +932,15 @@
 2019-03-04 19:16:45,137 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
 2019-03-04 19:16:45,185 - INFO - args: ('Console1',) = {'action': 'presence', 'time': 1551709005.1858969, 'user': {'account_name': 'Console1'}} - create_presence - __main__
 2019-03-04 19:16:45,186 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
+2019-06-12 21:28:55,855 - INFO - args: ('Console0',) = {'action': 'presence', 'time': 1560364135.855445, 'user': {'account_name': 'Console0'}} - create_presence - __main__
+2019-06-12 21:28:55,858 - INFO - args: ('Console1',) = {'action': 'presence', 'time': 1560364135.858437, 'user': {'account_name': 'Console1'}} - create_presence - __main__
+2019-06-12 21:28:55,873 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
+2019-06-12 21:28:55,874 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
+2019-06-12 21:32:20,608 - INFO - args: ('Console0',) = {'action': 'presence', 'time': 1560364340.6084087, 'user': {'account_name': 'Console0'}} - create_presence - __main__
+2019-06-12 21:32:20,611 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
+2019-06-12 21:32:20,634 - INFO - args: ('Console1',) = {'action': 'presence', 'time': 1560364340.6344402, 'user': {'account_name': 'Console1'}} - create_presence - __main__
+2019-06-12 21:32:20,635 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
+2019-06-12 22:08:22,851 - INFO - args: ('Console0',) = {'action': 'presence', 'time': 1560366502.8512378, 'user': {'account_name': 'Console0'}} - create_presence - __main__
+2019-06-12 22:08:22,853 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
+2019-06-12 22:08:22,868 - INFO - args: ('Console1',) = {'action': 'presence', 'time': 1560366502.8672423, 'user': {'account_name': 'Console1'}} - create_presence - __main__
+2019-06-12 22:08:22,869 - INFO - args: ({'response': 200},) = {'response': 200} - translate_message - __main__
