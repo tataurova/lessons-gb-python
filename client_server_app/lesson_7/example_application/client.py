@@ -139,6 +139,7 @@ if __name__ == '__main__':
         sys.exit(0)
     try:
         mode = sys.argv[3]
+        print(mode)
     except IndexError:
         mode = 'r'
     # ДАННЫЕ ПОЛУЧИЛИ -> СОЕДИНЯЕМСЯ С СЕРВЕРОМ
@@ -152,8 +153,9 @@ if __name__ == '__main__':
     response = get_message(client)
     # Разобрать ответ сервера
     response = translate_message(response)
-    #print(response)
+    print(response)
     if response['response'] == OK:
+        print('зашел в условие')
         print(response['response'])
         # в зависимости от режима мы будем или слушать или отправлять сообщения
         if mode == 'r':

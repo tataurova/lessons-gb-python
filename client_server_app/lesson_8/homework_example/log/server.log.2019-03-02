@@ -1,0 +1,8 @@
+2019-03-02 11:45:08,966 - INFO - args: ({'action': 'presence', 'time': 1551509108.9659534, 'user': {'account_name': 'Console1'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 11:45:08,969 - INFO - args: ({'action': 'presence', 'time': 1551509108.9659534, 'user': {'account_name': 'Console0'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 16:57:56,150 - INFO - args: ({'action': 'presence', 'time': 1551527876.1498513, 'user': {'account_name': 'Console0'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 16:57:56,151 - INFO - args: ({'action': 'presence', 'time': 1551527876.1518526, 'user': {'account_name': 'Console1'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 17:05:23,221 - INFO - args: ({'action': 'presence', 'time': 1551528323.221969, 'user': {'account_name': 'Console0'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 17:05:23,294 - INFO - args: ({'action': 'presence', 'time': 1551528323.293017, 'user': {'account_name': 'Console1'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 17:06:45,101 - INFO - args: ({'action': 'presence', 'time': 1551528405.1014948, 'user': {'account_name': 'Console0'}},) = {'response': 200} - presence_response - __main__
+2019-03-02 17:06:45,103 - INFO - args: ({'action': 'presence', 'time': 1551528405.1024954, 'user': {'account_name': 'Console1'}},) = {'response': 200} - presence_response - __main__

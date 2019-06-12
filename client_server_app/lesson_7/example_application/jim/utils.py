@@ -70,6 +70,7 @@ def get_message(sock):
     """
     # Получаем байты
     bresponse = sock.recv(1024)
+   # print(bresponse)
     # переводим байты в словарь
     response = bytes_to_dict(bresponse)
     # возвращаем словарь
