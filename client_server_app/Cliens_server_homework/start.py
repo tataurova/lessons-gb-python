@@ -12,18 +12,16 @@ while True:
     if user == 's':
         # запускаем сервер
         # Запускаем серверный скрипт и добавляем его в список процессов
-        p_list.append(Popen('python server.py',
-                            creationflags=CREATE_NEW_CONSOLE))
+        p_list.append(Popen('python server.py', creationflags=CREATE_NEW_CONSOLE))
         print('Сервер запущен')
-        # ждем на всякий пожарный
+        # ждем
         time.sleep(1)
         # запускаем клиентов на чтение
-        for _ in range(3):
+        for _ in range(2):
             # Запускаем клиентский скрипт и добавляем его в список процессов
-            p_list.append(Popen('python -i client.py localhost 7777 r',
-                                 creationflags=CREATE_NEW_CONSOLE))
+            p_list.append(Popen('python -i client.py localhost 7777 r', creationflags=CREATE_NEW_CONSOLE))
         print('Клиенты на чтение запущены')
-        # запускаем клиента на запись случайное число
+        # запускаем клиентов на запись
         for _ in range(2):
             # Запускаем клиентский скрипт и добавляем его в список процессов
             p_list.append(Popen('python -i client.py localhost 7777 w',

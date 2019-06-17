@@ -6,7 +6,7 @@ from client import create_presence, read_messages, write_messages
 
 client = socket(AF_INET, SOCK_STREAM)  # Создать сокет TCP
 addr = 'localhost'
-port = 7777
+port = 7778
 mode = 'w'
 # Соединиться с сервером
 client.connect((addr, port))

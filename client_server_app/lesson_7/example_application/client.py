@@ -94,10 +94,12 @@ def read_messages(client):
         message = get_message(client)
         print(message)
         # там должно быть сообщение всем
-        print(message[MESSAGE])
+        print('test' + message[MESSAGE])
+
 
 def create_message(message_to, text, account_name='Guest'):
     return {ACTION: MSG, TIME: time.time(), TO: message_to, FROM: account_name, MESSAGE: text}
+
 
 def write_messages(client):
     """Клиент пишет сообщение в бесконечном цикле"""
@@ -105,10 +107,11 @@ def write_messages(client):
         # Вводим сообщение с клавиатуры
         text = input(':)>')
         # Создаем jim сообщение
-        message = create_message('#all', text)
+        message = create_message('to all', text)
         #print(client)
         # отправляем на сервер
         send_message(client, message)
+
 
 # ЗАПУСКАЕМ КЛИЕНТА!!!
 if __name__ == '__main__':
@@ -151,10 +154,15 @@ if __name__ == '__main__':
     response = translate_message(response)
     #print(response)
     if response['response'] == OK:
+        print(response['response'])
         # в зависимости от режима мы будем или слушать или отправлять сообщения
         if mode == 'r':
+            print(mode)
+            print('привет я r')
             read_messages(client)
         elif mode == 'w':
+            print(mode)
+            print('привет я w')
             write_messages(client)
         else:
             raise Exception('Не верный режим чтения/записи')

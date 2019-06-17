@@ -18,10 +18,9 @@ while True:
         # ждем на всякий пожарный
         time.sleep(1)
         # запускаем клиентов на чтение
-        for _ in range(3):
+        for _ in range(2):
             # Запускаем клиентский скрипт и добавляем его в список процессов
-            p_list.append(Popen('python -i client.py localhost 7777 r',
-                                 creationflags=CREATE_NEW_CONSOLE))
+            p_list.append(Popen('python -i client.py localhost 7777 r', creationflags=CREATE_NEW_CONSOLE))
         print('Клиенты на чтение запущены')
         # запускаем клиента на запись случайное число
         for _ in range(2):
