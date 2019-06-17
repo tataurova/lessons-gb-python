@@ -16,5 +16,4 @@ def host_range_ping(network):
             print(f'Узел {host} недоступен!')
 
 
-
 host_range_ping(subnet)
