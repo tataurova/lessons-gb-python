@@ -7,7 +7,7 @@ from client import create_presence
 class TestClientCreatePresence(unittest.TestCase):
     # имя юзера не пустое
     def test_create_presence_user(self):
-        self.assertTrue(create_presence()['user']['account name'], not None)
+        self.assertTrue(create_presence()['user']['account_name'], not None)
 
     # время записывается корректно
     def test_create_presence_time(self):

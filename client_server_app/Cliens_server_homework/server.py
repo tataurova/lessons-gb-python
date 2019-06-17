@@ -1,10 +1,17 @@
 from socket import *
-from utils_server import get_message, presence_response, send_message
-from log.server_log_config import *
+from utils import get_message, send_message
 import select
-import logging
 
-logger = logging.getLogger('server')
+
+def presence_response(presence_message):
+
+    if 'action' in presence_message and \
+        presence_message['action'] == 'presence' and \
+        'time' in presence_message and isinstance(presence_message['time'], str):
+
+        return {'response': 200}
+    else:
+        return {'response': 900, 'error': 'Неправильный запрос'}
 
 
 def read_requests(r_clients, all_clients):
@@ -35,30 +42,18 @@ def write_responses(messages, w_clients, all_clients):
 if __name__ == '__main__':
 
     server = socket(AF_INET, SOCK_STREAM)
-#    try:
-#    port = 7777
+    port = 7777
     server.bind(('', 7777))
-    '''
-    except Exception:
-        port = 7778
-        server.bind(('', port))
-        res = 'Port 7777 unreachable. Port used 7778'
-        logger.warning('{} {} - {}'.format(res, server.bind.__name__, __name__))
-        '''
     server.listen(15)
     server.settimeout(0.2)
     clients = []
     while True:
         try:
-            res = 'Waiting for client'
-            logger.info('{}'.format(res))
             client, address = server.accept()
-            res = 'Client connected from address {}'.format(address)
-            logger.info('{}'.format(res))
             presence = get_message(client)
+            print(presence)
             response = presence_response(presence)
             send_message(client, response)
-            client.close()
         except OSError as e:
             pass  # timeout вышел
         else:
