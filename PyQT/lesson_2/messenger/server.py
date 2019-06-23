@@ -11,13 +11,14 @@
 from socket import *
 from utils import get_message, send_message
 import select
-from common.variables import *
-from common.utils import *
-from decos import log
 from descrptrs import Port
 from metaclasses import ServerMaker
 import sys
+import logging
+import argparse
 
+
+'''
 
 def presence_response(presence_message):
     """
@@ -117,10 +118,15 @@ if __name__ == '__main__':
 
 
 -------------------------------------------------------------------------------------------------------------------
+'''
+
+# Инициализация логирования сервера.
+logger = logging.getLogger('server')
+
 
 
 # Парсер аргументов коммандной строки.
-@log
+
 def arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('-p', default=7777, type=int, nargs='?')
@@ -129,6 +135,7 @@ def arg_parser():
     listen_address = namespace.a
     listen_port = namespace.p
     return listen_address, listen_port
+
 
 # Основной класс сервера
 class Server(metaclass=ServerMaker):
@@ -145,7 +152,7 @@ class Server(metaclass=ServerMaker):
         # Список сообщений на отправку.
         self.messages = []
 
-        # Словарь содержащий сопоставленные имена и соответствующие им сокеты.
+        # Словарь, содержащий сопоставленные имена и соответствующие им сокеты.
         self.names = dict()
 
     def init_socket(self):
@@ -199,55 +206,55 @@ class Server(metaclass=ServerMaker):
                 try:
                     self.process_message(message, send_data_lst)
                 except:
-                    logger.info(f'Связь с клиентом с именем {message[DESTINATION]} была потеряна')
-                    self.clients.remove(self.names[message[DESTINATION]])
-                    del self.names[message[DESTINATION]]
+                    logger.info(f'Связь с клиентом с именем {message["to"]} была потеряна')
+                    self.clients.remove(self.names[message['to']])
+                    del self.names[message['to']]
             self.messages.clear()
 
     # Функция адресной отправки сообщения определённому клиенту. Принимает словарь сообщение, список зарегистрированых
     # пользователей и слушающие сокеты. Ничего не возвращает.
     def process_message(self, message, listen_socks):
-        if message[DESTINATION] in self.names and self.names[message[DESTINATION]] in listen_socks:
-            send_message(self.names[message[DESTINATION]], message)
-            logger.info(f'Отправлено сообщение пользователю {message[DESTINATION]} от пользователя {message[SENDER]}.')
-        elif message[DESTINATION] in self.names and self.names[message[DESTINATION]] not in listen_socks:
+        if message['to'] in self.names and self.names[message['to']] in listen_socks:
+            send_message(self.names[message['to']], message)
+            logger.info(f'Отправлено сообщение пользователю {message["to"]} от пользователя {message["from"]}.')
+        elif message['to'] in self.names and self.names[message['to']] not in listen_socks:
             raise ConnectionError
         else:
             logger.error(
-                f'Пользователь {message[DESTINATION]} не зарегистрирован на сервере, отправка сообщения невозможна.')
+                f'Пользователь {message["to"]} не зарегистрирован на сервере, отправка сообщения невозможна.')
 
     # Обработчик сообщений от клиентов, принимает словарь - сообщение от клиента, проверяет корректность, отправляет
     #     словарь-ответ в случае необходимости.
     def process_client_message(self, message, client):
         logger.debug(f'Разбор сообщения от клиента : {message}')
         # Если это сообщение о присутствии, принимаем и отвечаем
-        if ACTION in message and message[ACTION] == PRESENCE and TIME in message and USER in message:
+        if 'action' in message and message['action'] == 'presence' and 'time' in message and 'user' in message:
             # Если такой пользователь ещё не зарегистрирован, регистрируем, иначе отправляем ответ и завершаем соединение.
-            if message[USER][ACCOUNT_NAME] not in self.names.keys():
-                self.names[message[USER][ACCOUNT_NAME]] = client
-                send_message(client, RESPONSE_200)
+            if message['user']['account_name'] not in self.names.keys():
+                self.names[message['user']['account_name']] = client
+                send_message(client, '200')
             else:
-                response = RESPONSE_400
-                response[ERROR] = 'Имя пользователя уже занято.'
+                response = '400'
+                response['error'] = 'Имя пользователя уже занято.'
                 send_message(client, response)
                 self.clients.remove(client)
                 client.close()
             return
         # Если это сообщение, то добавляем его в очередь сообщений. Ответ не требуется.
-        elif ACTION in message and message[ACTION] == MESSAGE and DESTINATION in message and TIME in message \
-                and SENDER in message and MESSAGE_TEXT in message:
+        elif 'action' in message and message['action'] == 'message' and 'to' in message and 'time' in message \
+                and 'from' in message and 'mess_text' in message:
             self.messages.append(message)
             return
         # Если клиент выходит
-        elif ACTION in message and message[ACTION] == EXIT and ACCOUNT_NAME in message:
-            self.clients.remove(self.names[ACCOUNT_NAME])
-            self.names[ACCOUNT_NAME].close()
-            del self.names[ACCOUNT_NAME]
+        elif 'action' in message and message['action'] == 'exit' and 'account_name' in message:
+            self.clients.remove(self.names['account_name'])
+            self.names['account_name'].close()
+            del self.names['account_name']
             return
         # Иначе отдаём Bad request
         else:
-            response = RESPONSE_400
-            response[ERROR] = 'Запрос некорректен.'
+            response = '400'
+            response['error'] = 'Запрос некорректен.'
             send_message(client, response)
             return
 

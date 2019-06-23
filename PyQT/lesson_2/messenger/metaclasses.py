@@ -67,11 +67,11 @@ class ClientMaker(type):
             # Пробуем
             try:
                 ret = dis.get_instructions(clsdict[func])
-                # Если не функция то ловим исключение
+                # Если не функция, то будет исключение
             except TypeError:
                 pass
             else:
-                # Раз функция разбираем код, получая используемые методы.
+                # Если функция, разбираем код, получая используемые методы.
                 for i in ret:
                     if i.opname == 'LOAD_GLOBAL':
                         if i.argval not in methods:

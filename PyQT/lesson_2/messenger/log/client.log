@@ -221,3 +221,5 @@
 2019-06-21 16:16:10,891 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '21-06-2019 16:16:10', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
 2019-06-21 16:16:10,891 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '21-06-2019 16:16:10', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
 2019-06-21 16:16:34,753 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1561122994.753722, 'to': 'Console0', 'from': 'Console3', 'message': 'dsd'}, with arguments: ('Console0', 'dsd', 'Console3')
+2019-06-24 00:43:52,780 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 00:43:59,134 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: pqw
