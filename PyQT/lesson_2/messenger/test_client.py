@@ -1,26 +1,27 @@
 import unittest
 import time
-from utils import translate_message
-from client import create_presence
+from client import create_presence, process_response_ans
+from errors import ReqFieldMissingError, ServerError
 
 
 # Тестируем функцию формирования сообщения от клиента
-class TestClientCreatePresence(unittest.TestCase):
-    # Имя юзера не пустое
-    def test_create_presence_user(self):
-        self.assertTrue(create_presence()['user']['account_name'], not None)
+class TestClass(unittest.TestCase):
 
     # Время записывается корректно
     def test_create_presence_time(self):
-        self.assertEqual(create_presence()['time'], time.strftime("%d-%m-%Y %H:%M:%S", time.localtime()))
+        self.assertEqual(create_presence('Test_user')['time'], time.strftime("%d-%m-%Y %H:%M:%S", time.localtime()))
 
 
 # Тестируем функцию разбора ответа сервера
 class TestClientTranslateMessage(unittest.TestCase):
 
     # Все правильно
-    def test_translate_message_cor_resp(self):
-        self.assertEqual(translate_message({'response': 200}), {'response': 200})
+    def test_200_ans(self):
+        self.assertEqual(process_response_ans({'response': 200}), '200 : OK')
+
+    # тест корректного разбора 400
+    def test_400_ans(self):
+        self.assertRaises(ServerError, process_response_ans , {'response': 400, 'error': 'Bad Request'})
 
 
 if __name__ == "__main__":
