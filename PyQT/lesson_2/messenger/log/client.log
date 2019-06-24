@@ -1,0 +1,673 @@
+2019-06-12 19:59:13,070 - INFO - Connected to server ('127.0.0.1', 7777) from ('127.0.0.1', 50168)
+2019-06-12 19:59:13,078 - INFO - Connected to server ('127.0.0.1', 7777) from ('127.0.0.1', 50169)
+2019-06-12 19:59:13,081 - INFO - Connected to server ('127.0.0.1', 7777) from ('127.0.0.1', 50170)
+2019-06-12 19:59:13,167 - INFO - Connected to server ('127.0.0.1', 7777) from ('127.0.0.1', 50171)
+2019-06-12 20:03:14,276 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50179)
+2019-06-12 20:03:14,302 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50180)
+2019-06-12 20:03:14,306 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50181)
+2019-06-12 20:03:14,324 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50182)
+2019-06-12 20:04:17,513 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50186)
+2019-06-12 20:04:32,870 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50187)
+2019-06-12 20:04:32,907 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50188)
+2019-06-12 20:04:32,917 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50189)
+2019-06-12 20:04:32,928 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50190)
+2019-06-12 20:07:39,110 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50196)
+2019-06-12 20:07:39,134 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50197)
+2019-06-12 20:07:39,143 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50198)
+2019-06-12 20:07:39,160 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50199)
+2019-06-12 20:08:44,002 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50200)
+2019-06-12 20:08:44,013 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50201)
+2019-06-12 20:08:44,035 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50202)
+2019-06-12 20:08:44,096 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50203)
+2019-06-12 20:10:44,296 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50208)
+2019-06-12 20:10:44,296 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:10:44', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:10:44,303 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50209)
+2019-06-12 20:10:44,303 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:10:44', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:10:44,303 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:10:44', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:10:44,318 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50211)
+2019-06-12 20:10:44,318 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:10:44', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:10:54,057 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560359454.0578494, 'to': 'Всем в чате: ', 'from': 'Guest', 'message': 'fgfg'}, with arguments: ('Всем в чате: ', 'fgfg')
+2019-06-12 20:12:11,267 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50212)
+2019-06-12 20:12:11,268 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:12:11', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:12:11,407 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50213)
+2019-06-12 20:12:11,407 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:12:11', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:12:11,414 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50214)
+2019-06-12 20:12:11,414 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:12:11', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:12:11,437 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50215)
+2019-06-12 20:12:11,437 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:12:11', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:12:13,472 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560359533.4722424, 'to': 'Всем в чате: ', 'from': 'Guest', 'message': 'gff'}, with arguments: ('Всем в чате: ', 'gff')
+2019-06-12 20:13:06,002 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50217)
+2019-06-12 20:13:06,003 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:13:06', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:13:06,070 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50218)
+2019-06-12 20:13:06,071 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:13:06', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:13:06,122 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50219)
+2019-06-12 20:13:06,122 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:13:06', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:13:06,123 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50220)
+2019-06-12 20:13:06,123 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:13:06', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:13:07,783 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560359587.783942, 'to': 'Всем в чате: ', 'from': 'Guest', 'message': 'vsfdds'}, with arguments: ('Всем в чате: ', 'vsfdds')
+2019-06-12 20:15:04,831 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50227)
+2019-06-12 20:15:04,832 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:15:04', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:15:04,837 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50228)
+2019-06-12 20:15:04,837 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:15:04', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:15:04,897 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50229)
+2019-06-12 20:15:04,898 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:15:04', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:15:04,908 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50230)
+2019-06-12 20:15:04,908 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:15:04', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:15:09,940 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560359709.940104, 'to': 'Всем в чате: ', 'from': 'Guest', 'message': 'dcca'}, with arguments: ('Всем в чате: ', 'dcca')
+2019-06-12 20:21:46,928 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:21:46', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:21:46,929 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:21:46', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:22:55,435 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:22:55', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:22:55,436 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:22:55', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:23:24,596 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:23:24', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:23:24,596 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:23:24', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:33:52,856 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:33:52', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:33:52,856 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:33:52', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:36:59,058 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50259)
+2019-06-12 20:36:59,058 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:36:59', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:37:28,686 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:37:28', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:37:44,037 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:37:44', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:37:53,178 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50264)
+2019-06-12 20:37:53,179 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:37:53', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:37:53,254 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50265)
+2019-06-12 20:37:53,254 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:37:53', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:37:53,255 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50266)
+2019-06-12 20:37:53,255 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:37:53', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:37:53,292 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50267)
+2019-06-12 20:37:53,293 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 20:37:53', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 20:38:00,444 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560361080.4445899, 'to': 'Всем в чате: ', 'from': 'Guest', 'message': 'jhjk'}, with arguments: ('Всем в чате: ', 'jhjk')
+2019-06-12 21:19:43,718 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50438)
+2019-06-12 21:19:43,718 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:19:43', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 21:19:43,718 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:19:43', 'user': {'account_name': 'Guest'}}, with arguments: ()
+2019-06-12 21:34:08,670 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50467)
+2019-06-12 21:34:08,670 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:34:08', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 21:34:08,687 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50468)
+2019-06-12 21:34:08,688 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:34:08', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 21:45:55,657 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50491)
+2019-06-12 21:45:55,657 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:45:55', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 21:45:55,685 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50492)
+2019-06-12 21:45:55,685 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:45:55', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 21:47:28,508 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50495)
+2019-06-12 21:47:28,509 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:47:28', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 21:47:28,530 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50496)
+2019-06-12 21:47:28,530 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:47:28', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 21:47:48,062 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560365268.062116, 'to': 'Console1', 'from': 'Console0', 'message': 'fdsfs'}, with arguments: ('Console1', 'fdsfs', 'Console0')
+2019-06-12 21:50:16,873 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50502)
+2019-06-12 21:50:16,874 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:50:16', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 21:50:16,886 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50503)
+2019-06-12 21:50:16,886 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:50:16', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 21:50:26,043 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560365426.043305, 'to': 'Console0', 'from': 'Console1', 'message': 'fdfs'}, with arguments: ('Console0', 'fdfs', 'Console1')
+2019-06-12 21:56:57,259 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50522)
+2019-06-12 21:56:57,259 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:56:57', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 21:56:57,271 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50523)
+2019-06-12 21:56:57,272 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:56:57', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 21:57:16,378 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560365836.3782282, 'to': 'Console0', 'from': 'Console1', 'message': 'ddsfsd'}, with arguments: ('Console0', 'ddsfsd', 'Console1')
+2019-06-12 21:59:15,771 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50530)
+2019-06-12 21:59:15,771 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:59:15', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 21:59:15,771 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50531)
+2019-06-12 21:59:15,771 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 21:59:15', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 21:59:25,491 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560365965.490215, 'to': 'Console0', 'from': 'Console1', 'message': 'fdfs'}, with arguments: ('Console0', 'fdfs', 'Console1')
+2019-06-12 22:07:03,402 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50547)
+2019-06-12 22:07:03,403 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:07:03', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:07:03,412 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50548)
+2019-06-12 22:07:03,412 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:07:03', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:07:14,113 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560366434.11312, 'to': 'Console0', 'from': 'Console1', 'message': 'fdfs'}, with arguments: ('Console0', 'fdfs', 'Console1')
+2019-06-12 22:09:06,459 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50553)
+2019-06-12 22:09:06,459 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:09:06', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:09:06,469 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50554)
+2019-06-12 22:09:06,470 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:09:06', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:09:22,156 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560366562.1566832, 'to': 'Console0', 'from': 'Console1', 'message': 'dfgg'}, with arguments: ('Console0', 'dfgg', 'Console1')
+2019-06-12 22:16:49,919 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50575)
+2019-06-12 22:16:49,919 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:16:49', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:16:49,928 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50576)
+2019-06-12 22:16:49,928 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:16:49', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:18:59,266 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560367139.2662172, 'to': 'Console0', 'from': 'Console1', 'message': 'fdfs'}, with arguments: ('Console0', 'fdfs', 'Console1')
+2019-06-12 22:20:48,441 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50584)
+2019-06-12 22:20:48,441 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:20:48', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:20:48,451 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50585)
+2019-06-12 22:20:48,451 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:20:48', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:21:44,879 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560367304.8794734, 'to': 'Console1', 'from': 'Console0', 'message': 'test'}, with arguments: ('Console1', 'test', 'Console0')
+2019-06-12 22:28:47,565 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50597)
+2019-06-12 22:28:47,565 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:28:47', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:28:47,577 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50598)
+2019-06-12 22:28:47,577 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:28:47', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:28:59,900 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560367739.9004774, 'to': 'Console0', 'from': 'Console1', 'message': 'test'}, with arguments: ('Console0', 'test', 'Console1')
+2019-06-12 22:29:47,183 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50600)
+2019-06-12 22:29:47,183 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:29:47', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:29:47,183 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:29:47', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:29:59,331 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560367799.3313906, 'to': 'Console1', 'from': 'Console0', 'message': 'test'}, with arguments: ('Console1', 'test', 'Console0')
+2019-06-12 22:33:40,677 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50611)
+2019-06-12 22:33:40,678 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:33:40', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:33:40,688 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50612)
+2019-06-12 22:33:40,688 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:33:40', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:33:50,011 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560368030.0111604, 'to': 'Console0', 'from': 'Console1', 'message': 'sdfd'}, with arguments: ('Console0', 'sdfd', 'Console1')
+2019-06-12 22:37:34,510 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50623)
+2019-06-12 22:37:34,510 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:37:34', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:37:34,529 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50624)
+2019-06-12 22:37:34,529 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:37:34', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:39:11,682 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50627)
+2019-06-12 22:39:11,683 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:39:11', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:39:11,693 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50628)
+2019-06-12 22:39:11,694 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:39:11', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:39:27,990 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560368367.9900427, 'to': 'Console0', 'from': 'Console1', 'message': 'test'}, with arguments: ('Console0', 'test', 'Console1')
+2019-06-12 22:40:01,505 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560368401.505409, 'to': 'Console1', 'from': 'Console0', 'message': 'fd'}, with arguments: ('Console1', 'fd', 'Console0')
+2019-06-12 22:40:08,017 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560368408.0171123, 'to': 'Console1', 'from': 'Console0', 'message': 'fd'}, with arguments: ('Console1', 'fd', 'Console0')
+2019-06-12 22:43:30,346 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50636)
+2019-06-12 22:43:30,346 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:43:30', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:43:30,346 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:43:30', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:43:46,042 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560368626.0422556, 'to': 'Console1', 'from': 'Console0', 'message': 'dfd'}, with arguments: ('Console1', 'dfd', 'Console0')
+2019-06-12 22:44:54,091 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50641)
+2019-06-12 22:44:54,091 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:44:54', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-12 22:44:54,099 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50642)
+2019-06-12 22:44:54,100 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '12-06-2019 22:44:54', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-12 22:45:04,177 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560368704.1777337, 'to': 'Console0', 'from': 'Console1', 'message': 'dfs'}, with arguments: ('Console0', 'dfs', 'Console1')
+2019-06-12 22:45:18,731 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560368718.7317724, 'to': 'Console1', 'from': 'Console0', 'message': 'fdfs'}, with arguments: ('Console1', 'fdfs', 'Console0')
+2019-06-13 01:41:37,179 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50882)
+2019-06-13 01:41:37,179 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '13-06-2019 01:41:37', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-13 01:41:37,189 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50883)
+2019-06-13 01:41:37,190 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '13-06-2019 01:41:37', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-13 01:41:45,568 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560379305.568065, 'to': 'Console0', 'from': 'Console1', 'message': 'fsdf'}, with arguments: ('Console0', 'fsdf', 'Console1')
+2019-06-13 01:47:35,803 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50899)
+2019-06-13 01:47:35,803 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '13-06-2019 01:47:35', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-13 01:47:35,814 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50900)
+2019-06-13 01:47:35,814 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '13-06-2019 01:47:35', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-13 01:47:44,979 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560379664.9798326, 'to': 'Console0', 'from': 'Console1', 'message': 'gfgdfgf'}, with arguments: ('Console0', 'gfgdfgf', 'Console1')
+2019-06-17 22:48:14,942 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50631)
+2019-06-17 22:48:14,943 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 22:48:14', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-17 22:48:14,959 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50632)
+2019-06-17 22:48:14,959 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 22:48:14', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-17 22:48:56,172 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560800936.1720223, 'to': 'Console0', 'from': 'Console1', 'message': 'fdd'}, with arguments: ('Console0', 'fdd', 'Console1')
+2019-06-17 22:49:09,987 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1560800949.987054, 'to': 'Console1', 'from': 'Console0', 'message': 'dfd'}, with arguments: ('Console1', 'dfd', 'Console0')
+2019-06-17 23:02:44,770 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50660)
+2019-06-17 23:02:44,770 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:02:44', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-17 23:02:44,778 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50661)
+2019-06-17 23:02:44,778 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:02:44', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-17 23:02:44,790 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50662)
+2019-06-17 23:02:44,790 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:02:44', 'user': {'account_name': 'Console2'}}, with arguments: ('Console2',)
+2019-06-17 23:04:13,091 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50666)
+2019-06-17 23:04:13,091 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:04:13', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-17 23:04:13,122 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50668)
+2019-06-17 23:04:13,123 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:04:13', 'user': {'account_name': 'Console3'}}, with arguments: ('Console3',)
+2019-06-17 23:04:13,123 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:04:13', 'user': {'account_name': 'Console2'}}, with arguments: ('Console2',)
+2019-06-17 23:04:13,151 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50670)
+2019-06-17 23:04:13,151 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:04:13', 'user': {'account_name': 'Console4'}}, with arguments: ('Console4',)
+2019-06-17 23:28:04,660 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50698)
+2019-06-17 23:28:04,660 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:28:04', 'user': {'account_name': 'Console3'}}, with arguments: ('Console3',)
+2019-06-17 23:28:04,663 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50699)
+2019-06-17 23:28:04,663 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:28:04', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-17 23:28:04,695 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50700)
+2019-06-17 23:28:04,696 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:28:04', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-17 23:28:04,722 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50701)
+2019-06-17 23:28:04,722 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:28:04', 'user': {'account_name': 'Console4'}}, with arguments: ('Console4',)
+2019-06-17 23:29:12,093 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50703)
+2019-06-17 23:29:12,094 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:29:12', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-17 23:29:12,094 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:29:12', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-17 23:34:10,553 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50715)
+2019-06-17 23:34:10,554 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:34:10', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-17 23:34:10,579 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50716)
+2019-06-17 23:34:10,580 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:34:10', 'user': {'account_name': 'Console2'}}, with arguments: ('Console2',)
+2019-06-17 23:37:38,790 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50723)
+2019-06-17 23:37:38,792 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:37:38', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-17 23:37:38,793 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50724)
+2019-06-17 23:37:38,794 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:37:38', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-17 23:37:38,858 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50725)
+2019-06-17 23:37:38,858 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:37:38', 'user': {'account_name': 'Console3'}}, with arguments: ('Console3',)
+2019-06-17 23:37:38,908 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50726)
+2019-06-17 23:37:38,908 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:37:38', 'user': {'account_name': 'Console5'}}, with arguments: ('Console5',)
+2019-06-17 23:37:38,911 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50728)
+2019-06-17 23:37:38,912 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '17-06-2019 23:37:38', 'user': {'account_name': 'Console4'}}, with arguments: ('Console4',)
+2019-06-21 16:16:10,882 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50709)
+2019-06-21 16:16:10,886 - INFO - Подключение к серверу от ('127.0.0.1', 7777) from ('127.0.0.1', 50711)
+2019-06-21 16:16:10,891 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '21-06-2019 16:16:10', 'user': {'account_name': 'Console2'}}, with arguments: ('Console2',)
+2019-06-21 16:16:10,891 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '21-06-2019 16:16:10', 'user': {'account_name': 'Console0'}}, with arguments: ('Console0',)
+2019-06-21 16:16:10,891 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '21-06-2019 16:16:10', 'user': {'account_name': 'Console1'}}, with arguments: ('Console1',)
+2019-06-21 16:16:34,753 - DEBUG - function create_message completed with result {'action': 'msg', 'time': 1561122994.753722, 'to': 'Console0', 'from': 'Console3', 'message': 'dsd'}, with arguments: ('Console0', 'dsd', 'Console3')
+2019-06-24 00:43:52,780 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 00:43:59,134 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: pqw
+2019-06-24 01:14:46,741 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:14:53,758 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: opl
+2019-06-24 01:14:53,763 - DEBUG - Сформировано presence сообщение для пользователя opl
+2019-06-24 01:14:53,763 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:14:53', 'user': {'account_name': 'opl'}}, with arguments: ('opl',)
+2019-06-24 01:20:18,548 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:20:18,561 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:20:29,353 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: yui
+2019-06-24 01:20:29,357 - DEBUG - Сформировано presence сообщение для пользователя yui
+2019-06-24 01:20:29,357 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:20:29', 'user': {'account_name': 'yui'}}, with arguments: ('yui',)
+2019-06-24 01:20:34,361 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: jhjk
+2019-06-24 01:20:34,366 - DEBUG - Сформировано presence сообщение для пользователя jhjk
+2019-06-24 01:20:34,366 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:20:34', 'user': {'account_name': 'jhjk'}}, with arguments: ('jhjk',)
+2019-06-24 01:21:56,938 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:21:56,950 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:22:00,085 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: hjh
+2019-06-24 01:22:00,090 - DEBUG - Сформировано presence сообщение для пользователя hjh
+2019-06-24 01:22:00,090 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:22:00', 'user': {'account_name': 'hjh'}}, with arguments: ('hjh',)
+2019-06-24 01:22:04,350 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: .ml;k
+2019-06-24 01:22:04,355 - DEBUG - Сформировано presence сообщение для пользователя .ml;k
+2019-06-24 01:22:04,355 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:22:04', 'user': {'account_name': '.ml;k'}}, with arguments: ('.ml;k',)
+2019-06-24 01:26:22,212 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:26:22,222 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:26:28,041 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Ольга
+2019-06-24 01:26:28,045 - DEBUG - Сформировано presence сообщение для пользователя Ольга
+2019-06-24 01:26:28,045 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:26:28', 'user': {'account_name': 'Ольга'}}, with arguments: ('Ольга',)
+2019-06-24 01:26:34,615 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Ьтмв
+2019-06-24 01:26:34,620 - DEBUG - Сформировано presence сообщение для пользователя Ьтмв
+2019-06-24 01:26:34,620 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:26:34', 'user': {'account_name': 'Ьтмв'}}, with arguments: ('Ьтмв',)
+2019-06-24 01:32:43,601 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:32:43,611 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:32:45,237 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: s
+2019-06-24 01:32:45,242 - DEBUG - Сформировано presence сообщение для пользователя s
+2019-06-24 01:32:45,243 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:32:45', 'user': {'account_name': 's'}}, with arguments: ('s',)
+2019-06-24 01:32:48,069 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: w
+2019-06-24 01:32:48,073 - DEBUG - Сформировано presence сообщение для пользователя w
+2019-06-24 01:32:48,074 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:32:48', 'user': {'account_name': 'w'}}, with arguments: ('w',)
+2019-06-24 01:35:04,815 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:35:04,821 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 01:36:40,991 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 01:36:40,992 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 01:36:40,999 - DEBUG - Сформировано presence сообщение для пользователя Client1
+2019-06-24 01:36:40,999 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:36:41', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 01:36:41,001 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 01:36:41,003 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 01:36:41,007 - DEBUG - Сформировано presence сообщение для пользователя Client2
+2019-06-24 01:36:41,007 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:36:41', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 01:43:27,035 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 01:43:27,036 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 01:43:27,043 - DEBUG - Сформировано presence сообщение для пользователя Client1
+2019-06-24 01:43:27,043 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:43:27', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 01:43:27,048 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 01:43:27,049 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 01:43:27,058 - DEBUG - Сформировано presence сообщение для пользователя Client2
+2019-06-24 01:43:27,058 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:43:27', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 01:45:32,062 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 01:45:32,063 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 01:45:32,071 - DEBUG - Сформировано presence сообщение для пользователя Client1
+2019-06-24 01:45:32,071 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:45:32', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 01:45:32,071 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 01:45:32,072 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 01:45:32,077 - DEBUG - Сформировано presence сообщение для пользователя Client2
+2019-06-24 01:45:32,077 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:45:32', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 01:46:54,748 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 01:46:54,749 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 01:46:54,755 - DEBUG - Сформировано presence сообщение для пользователя Client1
+2019-06-24 01:46:54,756 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:46:54', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 01:46:54,759 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 01:46:54,760 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 01:46:54,765 - DEBUG - Сформировано presence сообщение для пользователя Client2
+2019-06-24 01:46:54,765 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:46:54', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 01:47:50,825 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 01:47:50,825 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 01:47:50,830 - DEBUG - Сформировано presence сообщение для пользователя Client1
+2019-06-24 01:47:50,830 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:47:50', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 01:47:50,837 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 01:47:50,838 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 01:47:50,844 - DEBUG - Сформировано presence сообщение для пользователя Client2
+2019-06-24 01:47:50,845 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 01:47:50', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 20:21:27,598 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:21:27,599 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:21:27,599 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:21:27,604 - DEBUG - Сформировано presence сообщение для пользователя Client2
+2019-06-24 20:21:27,605 - DEBUG - Сформировано presence сообщение для пользователя Client1
+2019-06-24 20:21:27,605 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:21:27', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 20:21:27,605 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:21:27', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 20:26:50,824 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:26:50,825 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:26:50,832 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:26:50,833 - DEBUG - Сформировано presence сообщение для пользователя Client1
+2019-06-24 20:26:50,833 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:26:50,833 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:26:50', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 20:26:50,837 - DEBUG - Сформировано presence сообщение для пользователя Client2
+2019-06-24 20:26:50,837 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:26:50', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 20:29:45,009 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:29:45,010 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:29:45,016 - DEBUG - Сформировано presence сообщение для пользователя Client1
+2019-06-24 20:29:45,016 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:29:45', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 20:29:45,021 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:29:45,022 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:29:45,029 - DEBUG - Сформировано presence сообщение для пользователя Client2
+2019-06-24 20:29:45,029 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:29:45', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 20:42:02,313 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:42:02,314 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:42:02,320 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 20:42:02', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 20:42:02,320 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:42:02', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 20:42:02,325 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:42:02,326 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:42:02,334 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 20:42:02', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 20:42:02,334 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:42:02', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 20:46:31,992 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:46:31,992 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:46:31,997 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 20:46:31', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 20:46:31,998 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:46:31', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 20:46:32,004 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:46:32,005 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:46:32,009 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 20:46:32', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 20:46:32,009 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:46:32', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 20:48:39,278 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:48:39,278 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:48:39,285 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 20:48:39', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 20:48:39,286 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:48:39', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 20:48:39,297 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:48:39,298 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:48:39,306 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 20:48:39', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 20:48:39,306 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:48:39', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 20:49:51,130 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:49:51,130 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:49:51,139 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:49:51,140 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:49:52,139 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:49:52,146 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:49:57,532 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:49:57,533 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:49:57,547 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:49:57,548 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:49:58,540 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:49:58,554 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:50:04,152 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:50:04,153 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:50:04,165 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:50:04,165 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:50:05,163 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:50:05,172 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:50:15,516 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:50:15,517 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:50:15,535 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:50:15,535 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:50:16,522 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:50:16,541 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:51:31,880 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:51:31,881 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:51:31,889 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:51:31,890 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:51:32,888 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:51:32,907 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:53:37,882 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:53:37,883 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:53:37,886 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:53:37,887 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:53:38,888 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:53:38,893 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:54:00,176 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:54:00,176 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:54:00,182 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:54:00,183 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:54:01,182 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:54:01,191 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:54:14,899 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:54:14,900 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:54:14,912 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:54:14,912 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:54:15,908 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:54:15,917 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:55:07,977 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:55:07,978 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:55:07,996 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:55:07,997 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:55:08,985 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:55:09,005 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 20:55:34,168 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:55:34,168 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:55:34,176 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 20:55:34', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 20:55:34,177 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:55:34', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 20:55:34,182 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 20:55:34,182 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:55:34,187 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 20:55:34', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 20:55:34,187 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:55:34', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 20:59:50,919 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 20:59:50,920 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 20:59:50,926 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+nt_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 20:59:50,927 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:59:50', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 20:59:50,928 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 20:59:50,933 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 20:59:50', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 20:59:50,934 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 20:59:50', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:00:35,598 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 21:00:39,385 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: kjk
+2019-06-24 21:00:39,390 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:00:39', 'user': {'account_name': 'kjk'}} сообщение для пользователя kjk
+2019-06-24 21:00:39,390 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:00:39', 'user': {'account_name': 'kjk'}}, with arguments: ('kjk',)
+2019-06-24 21:02:31,677 - DEBUG - function arg_parser completed with result ('localhost', 7777, None), with arguments: ()
+2019-06-24 21:02:34,081 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: в
+2019-06-24 21:02:34,087 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:02:34', 'user': {'account_name': 'в'}} сообщение для пользователя в
+2019-06-24 21:02:34,087 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:02:34', 'user': {'account_name': 'в'}}, with arguments: ('в',)
+2019-06-24 21:07:00,365 - CRITICAL - Не удалось подключиться к серверу localhost:7777, конечный компьютер отверг запрос на подключение.
+2019-06-24 21:07:59,351 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:07:59,352 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:07:59,358 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:07:59', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:07:59,358 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:07:59', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:07:59,379 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:07:59,389 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:07:59,396 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:07:59', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:07:59,396 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:07:59', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:16:01,642 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:16:01,643 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:16:01,648 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:16:01,648 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:16:01,650 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:16:01', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:16:01,650 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:16:01', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:16:01,653 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:16:01', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:16:01,653 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:16:01', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:25:18,140 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:25:18,141 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:25:18,146 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:25:18', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:25:18,147 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:25:18', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:25:18,182 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:25:18,183 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:25:18,190 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:25:18', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:25:18,191 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:25:18', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:30:15,305 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:30:15,305 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:30:15,310 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:30:15', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:30:15,310 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:30:15', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:30:15,316 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:30:15,318 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:30:15,324 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:30:15', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:30:15,324 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:30:15', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:32:12,171 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:32:12,172 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:32:12,177 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:32:12', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:32:12,177 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:32:12', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:32:12,182 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:32:12,182 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:32:12,188 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:32:12', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:32:12,188 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:32:12', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:36:21,773 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:36:21,773 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:36:21,782 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+nt_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:36:21,782 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:36:21', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:36:21,783 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:36:21,788 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:36:21', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:36:21,788 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:36:21', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:45:34,772 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:45:34,773 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:45:34,780 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:45:34', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:45:34,780 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:45:34,780 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:45:34', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:45:34,780 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:45:34,787 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:45:34', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:45:34,787 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:45:34', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:45:34,850 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:45:34,850 - ERROR - В ответе сервера отсутствует необходимое поле response
+2019-06-24 21:45:34,981 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:45:34,982 - ERROR - В ответе сервера отсутствует необходимое поле response
+2019-06-24 21:46:01,362 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:46:01,363 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:46:01,369 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:46:01', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:46:01,369 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:46:01', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:46:01,376 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:46:01,377 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:46:01,385 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:46:01', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:46:01,385 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:46:01', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:46:01,441 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:46:01,441 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 21:46:01,451 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 21:46:01,453 - DEBUG - Запущены процессы
+2019-06-24 21:46:01,541 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:46:01,541 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 21:46:01,542 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 21:46:01,544 - DEBUG - Запущены процессы
+2019-06-24 21:51:10,619 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:51:10,619 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:51:10,627 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:51:10', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:51:10,628 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:51:10', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:51:10,633 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:51:10,634 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:51:10,642 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:51:10', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:51:10,642 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:51:10', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:51:10,651 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:51:10,651 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 21:51:10,662 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 21:51:10,664 - DEBUG - Запущены процессы
+2019-06-24 21:51:10,748 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:51:10,748 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 21:51:10,749 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 21:51:10,750 - DEBUG - Запущены процессы
+2019-06-24 21:54:28,398 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:54:28,399 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:54:28,404 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:54:28', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:54:28,405 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:54:28', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:54:28,409 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:54:28,410 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:54:28,418 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:54:28', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:54:28,418 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:54:28', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:54:28,440 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:54:28,440 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 21:54:28,451 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 21:54:28,453 - DEBUG - Запущены процессы
+2019-06-24 21:54:28,534 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:54:28,534 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 21:54:28,538 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 21:54:28,541 - DEBUG - Запущены процессы
+2019-06-24 21:58:17,564 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 21:58:17,565 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 21:58:17,573 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:58:17', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 21:58:17,573 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:58:17', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 21:58:17,577 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 21:58:17,577 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 21:58:17,582 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 21:58:17', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 21:58:17,582 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 21:58:17', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 21:58:17,584 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:58:17,585 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 21:58:17,585 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 21:58:17,589 - DEBUG - Запущены процессы
+2019-06-24 21:58:18,085 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 21:58:18,085 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 21:58:18,086 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 21:58:18,087 - DEBUG - Запущены процессы
+2019-06-24 22:01:58,373 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:01:58,373 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:01:58,382 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 22:01:58', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 22:01:58,382 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 22:01:58', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 22:01:58,383 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:01:58,384 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:01:58,388 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 22:01:58', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 22:01:58,389 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 22:01:58', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 22:01:58,390 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 22:01:58,390 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 22:01:58,391 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 22:01:58,395 - DEBUG - Запущены процессы
+2019-06-24 22:01:58,891 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 22:01:58,891 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 22:01:58,893 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 22:01:58,894 - DEBUG - Запущены процессы
+2019-06-24 22:03:04,355 - DEBUG - Сформирован словарь сообщения: {'action': 'message', 'from': 'Client1', 'to': 'Client2', 'time': '24-06-2019 22:03:04', 'mess_text': 'hi'}
+2019-06-24 22:03:04,356 - INFO - Отправлено сообщение для пользователя Client2
+2019-06-24 22:03:04,451 - INFO - Получено сообщение от пользователя Client1:
+hi
+2019-06-24 22:04:51,670 - DEBUG - Сформирован словарь сообщения: {'action': 'message', 'from': 'Client1', 'to': 'Client2', 'time': '24-06-2019 22:04:51', 'mess_text': 'gs'}
+2019-06-24 22:04:51,670 - INFO - Отправлено сообщение для пользователя Client2
+2019-06-24 22:04:52,049 - INFO - Получено сообщение от пользователя Client1:
+gs
+2019-06-24 22:05:51,673 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:05:51,674 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:05:51,679 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 22:05:51', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 22:05:51,679 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 22:05:51', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 22:05:51,680 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 22:05:51,680 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 22:05:51,680 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 22:05:51,682 - DEBUG - Запущены процессы
+2019-06-24 22:05:51,684 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:05:51,685 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:05:51,692 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 22:05:51', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 22:05:51,692 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 22:05:51', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 22:05:52,193 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 22:05:52,193 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 22:05:52,193 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 22:05:52,195 - DEBUG - Запущены процессы
+2019-06-24 22:06:06,153 - DEBUG - Сформирован словарь сообщения: {'action': 'message', 'from': 'Client2', 'to': 'Client1', 'time': '24-06-2019 22:06:06', 'mess_text': 'dfd'}
+2019-06-24 22:06:06,154 - INFO - Отправлено сообщение для пользователя Client1
+2019-06-24 22:06:06,206 - INFO - Получено сообщение от пользователя Client2:
+dfd
+2019-06-24 22:06:27,821 - DEBUG - Сформирован словарь сообщения: {'action': 'message', 'from': 'Client1', 'to': 'Client2', 'time': '24-06-2019 22:06:27', 'mess_text': 'dfs'}
+2019-06-24 22:06:27,821 - INFO - Отправлено сообщение для пользователя Client2
+2019-06-24 22:06:28,226 - INFO - Получено сообщение от пользователя Client1:
+dfs
+2019-06-24 22:07:52,294 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:07:52,295 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:07:52,302 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 22:07:52', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 22:07:52,303 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 22:07:52', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 22:07:52,304 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:07:52,305 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:07:52,310 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 22:07:52', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 22:07:52,310 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 22:07:52', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 22:07:52,311 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 22:07:52,311 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 22:07:52,311 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 22:07:52,313 - DEBUG - Запущены процессы
+2019-06-24 22:07:52,811 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 22:07:52,811 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 22:07:52,811 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 22:07:52,813 - DEBUG - Запущены процессы
+2019-06-24 22:08:01,589 - DEBUG - Сформирован словарь сообщения: {'action': 'message', 'from': 'Client2', 'to': 'Client1', 'time': '24-06-2019 22:08:01', 'mess_text': 'dfs'}
+2019-06-24 22:08:01,590 - INFO - Отправлено сообщение для пользователя Client1
+2019-06-24 22:08:01,818 - INFO - Получено сообщение от пользователя Client2:
+dfs
+2019-06-24 22:18:19,906 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:18:19,906 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:18:19,922 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:18:19,923 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:20:14,322 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:20:14,323 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:20:14,333 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:20:14,334 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:22:28,852 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:22:28,853 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:22:28,865 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:22:28,867 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:26:44,906 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:26:44,906 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:26:44,920 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:26:44,921 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:27:14,723 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:27:14,724 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:27:14,749 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:27:14,750 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:27:59,103 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:27:59,104 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:27:59,114 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:27:59,115 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:29:46,282 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:29:46,282 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:29:46,287 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:29:46,287 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:30:27,358 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:30:27,359 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:30:27,373 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:30:27,374 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:31:28,152 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client1'), with arguments: ()
+2019-06-24 22:31:28,153 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client1
+2019-06-24 22:31:28,159 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 22:31:28', 'user': {'account_name': 'Client1'}} сообщение для пользователя Client1
+2019-06-24 22:31:28,159 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 22:31:28', 'user': {'account_name': 'Client1'}}, with arguments: ('Client1',)
+2019-06-24 22:31:28,159 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 22:31:28,160 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 22:31:28,160 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 22:31:28,161 - DEBUG - Запущены процессы
+2019-06-24 22:31:28,162 - DEBUG - function arg_parser completed with result ('localhost', 7777, 'Client2'), with arguments: ()
+2019-06-24 22:31:28,163 - INFO - Запущен клиент с парамертами: адрес сервера: localhost , порт: 7777, имя пользователя: Client2
+2019-06-24 22:31:28,171 - DEBUG - Сформировано {'action': 'presence', 'time': '24-06-2019 22:31:28', 'user': {'account_name': 'Client2'}} сообщение для пользователя Client2
+2019-06-24 22:31:28,171 - DEBUG - function create_presence completed with result {'action': 'presence', 'time': '24-06-2019 22:31:28', 'user': {'account_name': 'Client2'}}, with arguments: ('Client2',)
+2019-06-24 22:31:28,671 - DEBUG - Разбор приветственного сообщения от сервера: {'response': 200}
+2019-06-24 22:31:28,671 - DEBUG - function process_response_ans completed with result 200 : OK, with arguments: ({'response': 200},)
+2019-06-24 22:31:28,671 - INFO - Установлено соединение с сервером. Ответ сервера: 200 : OK
+2019-06-24 22:31:28,673 - DEBUG - Запущены процессы
+2019-06-24 22:31:49,771 - DEBUG - Сформирован словарь сообщения: {'action': 'message', 'from': 'Client2', 'to': 'Client1', 'time': '24-06-2019 22:31:49', 'mess_text': 'fd'}
+2019-06-24 22:31:49,771 - INFO - Отправлено сообщение для пользователя Client1
+2019-06-24 22:31:50,192 - INFO - Получено сообщение от пользователя Client2:
+fd
