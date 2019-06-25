@@ -21,7 +21,7 @@ class TestClientTranslateMessage(unittest.TestCase):
 
     # тест корректного разбора 400
     def test_400_ans(self):
-        self.assertRaises(ServerError, process_response_ans , {'response': 400, 'error': 'Bad Request'})
+        self.assertRaises(ServerError, process_response_ans, {'response': 400, 'error': 'Bad Request'})
 
 
 if __name__ == "__main__":

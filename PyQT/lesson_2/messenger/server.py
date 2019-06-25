@@ -75,7 +75,6 @@ class Server(metaclass=ServerMaker):
 
             recv_data_lst = []
             send_data_lst = []
-            err_lst = []
             # Проверяем на наличие ждущих клиентов
             try:
                 if self.clients:
@@ -124,7 +123,6 @@ class Server(metaclass=ServerMaker):
             # соединение.
             if message['user']['account_name'] not in self.names.keys():
                 self.names[message['user']['account_name']] = client
-                print(client)
                 send_message(client, {'response': 200})
             else:
                 response = {
