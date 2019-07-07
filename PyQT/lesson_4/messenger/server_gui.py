@@ -26,7 +26,7 @@ def gui_create_model(database):
     return list
 
 
-# GUI - Функция реализующая заполнение таблицы историей сообщений.
+# GUI - Функция, реализующая заполнение таблицы историей сообщений.
 def create_stat_model(database):
     # Список записей из базы
     hist_list = database.message_history()
@@ -82,7 +82,7 @@ class MainWindow(QMainWindow):
         self.toolbar.addAction(self.config_btn)
 
         # Настройки геометрии основного окна
-        # Поскольку работать с динамическими размерами мы не умеем, и мало времени на изучение, размер окна фиксирован.
+        # Размер окна фиксирован.
         self.setFixedSize(800, 600)
         self.setWindowTitle('Messaging Server alpha release')
 
@@ -117,7 +117,7 @@ class HistoryWindow(QDialog):
         self.close_button.move(250, 650)
         self.close_button.clicked.connect(self.close)
 
-        # Лист с собственно историей
+        # Лист с историей
         self.history_table = QTableView(self)
         self.history_table.move(10, 10)
         self.history_table.setFixedSize(580, 620)
@@ -147,7 +147,7 @@ class ConfigWindow(QDialog):
         self.db_path.move(10, 30)
         self.db_path.setReadOnly(True)
 
-        # Кнопка выбора пути.
+        # Кнопка выбора пути
         self.db_path_select = QPushButton('Обзор...', self)
         self.db_path_select.move(275, 28)
 

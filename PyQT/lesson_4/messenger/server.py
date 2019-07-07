@@ -16,6 +16,7 @@ from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtCore import QTimer
 from server_gui import MainWindow, gui_create_model, HistoryWindow, create_stat_model, ConfigWindow
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
+from utils import get_message, send_message
 
 # Инициализация логирования сервера.
 logger = logging.getLogger('server')
@@ -64,7 +65,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
 
     def init_socket(self):
         logger.info(
-            f'Запущен сервер, порт для подключений: {self.port} , адрес с которого принимаются подключения:'
+            f'Запущен сервер, порт для подключений: {self.port} , адрес, с которого принимаются подключения:'
             f' {self.addr}.'
             f' Если адрес не указан, принимаются соединения с любых адресов.')
         # Готовим сокет
@@ -123,7 +124,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
                     del self.names[message['to']]
             self.messages.clear()
 
-    # Функция адресной отправки сообщения определённому клиенту. Принимает словарь сообщение, список зарегистрированых
+    # Функция адресной отправки сообщения определённому клиенту. Принимает словарь - сообщение, список зарегистрированых
     # пользователей и слушающие сокеты. Ничего не возвращает.
     def process_message(self, message, listen_socks):
         if message['to'] in self.names and self.names[message['to']] in listen_socks:
@@ -225,7 +226,6 @@ def main():
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
-
     config.read(f"{dir_path}/{'server.ini'}")
 
     # Загрузка параметров командной строки, если нет параметров, то задаём значения по умоланию.
@@ -249,8 +249,7 @@ def main():
     main_window.active_clients_table.resizeColumnsToContents()
     main_window.active_clients_table.resizeRowsToContents()
 
-
-    # Функция обновляющяя список подключённых, проверяет флаг подключения, и если надо обновляет список
+    # Функция, обновляющяя список подключённых, проверяет флаг подключения, и если надо, обновляет список
     def list_update():
         global new_connection
         if new_connection:
@@ -260,8 +259,7 @@ def main():
             with conflag_lock:
                 new_connection = False
 
-
-    # Функция создающяя окно со статистикой клиентов
+    # Функция, создающяя окно со статистикой клиентов
     def show_statistics():
         global stat_window
         stat_window = HistoryWindow()
@@ -270,8 +268,7 @@ def main():
         stat_window.history_table.resizeRowsToContents()
         stat_window.show()
 
-
-    # Функция создающяя окно с настройками сервера.
+    # Функция, создающяя окно с настройками сервера.
     def server_config():
         global config_window
         # Создаём окно и заносим в него текущие параметры
@@ -281,7 +278,6 @@ def main():
         config_window.port.insert(config['SETTINGS']['Default_port'])
         config_window.ip.insert(config['SETTINGS']['Listen_Address'])
         config_window.save_btn.clicked.connect(save_server_config)
-
 
     # Функция сохранения настроек
     def save_server_config():
@@ -303,7 +299,6 @@ def main():
                     message.information(config_window, 'OK', 'Настройки успешно сохранены!')
             else:
                 message.warning(config_window, 'Ошибка', 'Порт должен быть от 1024 до 65536')
-
 
     # Таймер, обновляющий список клиентов 1 раз в секунду
     timer = QTimer()

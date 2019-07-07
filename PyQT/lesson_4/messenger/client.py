@@ -44,7 +44,7 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
     def create_message(self):
         to = input('Введите получателя сообщения: ')
         message = input('Введите сообщение для отправки: ')
-		
+
         # Проверим, что получатель существует
         with database_lock:
             if not self.database.check_user(to):
@@ -107,7 +107,7 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
             # история сообщений.
             elif command == 'history':
                 self.print_history()
-								 
+
             else:
                 print('Команда не распознана, попробуйте снова. help - вывести поддерживаемые команды.')
 
@@ -121,7 +121,7 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
         print('help - вывести подсказки по командам')
         print('exit - выход из программы')
 
-# Функция выводящяя историю сообщений
+# Функция, выводящяя историю сообщений
     def print_history(self):
         ask = input('Показать входящие сообщения - in, исходящие - out, все - просто Enter: ')
         with database_lock:
@@ -159,7 +159,7 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
                         add_contact(self.sock, self.account_name, edit)
                     except ServerError:
                         logger.error('Не удалось отправить информацию на сервер.')
-	
+
 
 # Класс-приёмник сообщений с сервера. Принимает сообщения, выводит в консоль.
 class ClientReader(threading.Thread, metaclass=ClientMaker):
@@ -195,7 +195,7 @@ class ClientReader(threading.Thread, metaclass=ClientMaker):
                 else:
                     if 'action' in message and message['action'] == 'message' and 'from' in message and 'to' in message \
                             and 'mess_text' in message and message['to'] == self.account_name:
-                        print(f'\nПолучено сообщение от пользователя {message['from']}:\n{message['mess_text']}')
+                        print(f'\nПолучено сообщение от пользователя {message["from"]}:\n{message["mess_text"]}')
                         # Захватываем работу с базой данных и сохраняем в неё сообщение
                         with database_lock:
                             try:
@@ -203,7 +203,7 @@ class ClientReader(threading.Thread, metaclass=ClientMaker):
                             except:
                                 logger.error('Ошибка взаимодействия с базой данных')
 
-                        logger.info(f'Получено сообщение от пользователя {message['from']}:\n{message['mess_text']}')
+                        logger.info(f'Получено сообщение от пользователя {message["from"]}:\n{message["mess_text"]}')
                     else:
                         logger.error(f'Получено некорректное сообщение с сервера: {message}')
 
@@ -218,7 +218,7 @@ def create_presence(account_name):
             'account_name': account_name
         }
     }
-    logger.debug(f'Сформировано {'presense'} сообщение для пользователя {account_name}')
+    logger.debug(f'Сформировано {"presense"} сообщение для пользователя {account_name}')
     return out
 
 
@@ -227,11 +227,11 @@ def create_presence(account_name):
 @log
 def process_response_ans(message):
     logger.debug(f'Разбор приветственного сообщения от сервера: {message}')
-    if RESPONSE in message:
+    if 'response' in message:
         if message['response'] == 200:
             return '200 : OK'
         elif message['response'] == 400:
-            raise ServerError(f'400 : {message['error']}')
+            raise ServerError(f'400 : {message["error"]}')
     raise ReqFieldMissingError('response')
 
 
@@ -250,8 +250,8 @@ def arg_parser():
     # проверим подходящий номер порта
     if not 1023 < server_port < 65536:
         logger.critical(
-            f'Попытка запуска клиента с неподходящим номером порта: {server_port}. Допустимы адреса с 1024 до 65535. Клиент завершается.')
-																										 
+            f'Попытка запуска клиента с неподходящим номером порта: {server_port}. Допустимы адреса с 1024 до 65535.'
+            f' Клиент завершается.')
         exit(1)
 
     return server_address, server_port, client_name
@@ -362,7 +362,6 @@ def main():
 
     logger.info(
         f'Запущен клиент с парамертами: адрес сервера: {server_address} , порт: {server_port}, имя пользователя: {client_name}')
-														   
 
     # Инициализация сокета и сообщение серверу о нашем появлении
     try:
@@ -387,11 +386,10 @@ def main():
         exit(1)
     except (ConnectionRefusedError, ConnectionError):
         logger.critical(
-            f'Не удалось подключиться к серверу {server_address}:{server_port}, конечный компьютер отверг запрос на подключение.')
-																										  
+            f'Не удалось подключиться к серверу {server_address}:{server_port}, конечный компьютер отверг запрос '
+            f'на подключение.')
         exit(1)
     else:
-
 
         # Инициализация БД
         database = ClientDatabase(client_name)
