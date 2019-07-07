@@ -33,13 +33,26 @@ class ServerStorage:
             self.ip = ip
             self.port = port
 
-    def __init__(self):
+    # Класс - отображение таблицы контактов пользователей
+    class UsersContacts:
+        def __init__(self, user, contact):
+            self.id = None
+            self.user = user
+            self.contact = contact
+
+        # Класс отображение таблицы истории действий
+    class UsersHistory:
+        def __init__(self, user):
+            self.id = None
+            self.user = user
+            self.sent = 0
+            self.accepted = 0
+
+    def __init__(self, path):
         # Создаём движок базы данных
-        # SERVER_DATABASE - sqlite:///server_base.db3
-        # echo=False - отключаем ведение лога (вывод sql-запросов)
-        # pool_recycle - По умолчанию соединение с БД через 8 часов простоя обрывается.
-        # Чтобы это не случилось, нужно добавить опцию pool_recycle = 7200 (переуст-ка соед-я через 2 часа)
-        self.database_engine = create_engine('sqlite:///server_base.db3', echo=False, pool_recycle=7200)
+        print(path)
+        self.database_engine = create_engine(f'sqlite:///{path}', echo=False, pool_recycle=7200,
+                                             connect_args={'check_same_thread': False})
 
         # Создаём объект MetaData
         self.metadata = MetaData()
