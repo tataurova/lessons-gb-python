@@ -143,7 +143,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
     # Обработчик сообщений от клиентов, принимает словарь - сообщение от клиента, проверяет корректность, отправляет
     # словарь-ответ в случае необходимости.
     def process_client_message(self, message, client):
-
+        global new_connection
         logger.debug(f'Разбор сообщения от клиента : {message}')
 
         # Если это сообщение о присутствии, принимаем и отвечаем
@@ -155,7 +155,8 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 client_ip, client_port = client.getpeername()
                 self.database.user_login(message['user']['account_name'], client_ip, client_port)
                 send_message(client, {'response': 200})
-
+                with conflag_lock:
+                    new_connection = True
 
             else:
                 response = {
