@@ -90,6 +90,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
             else:
                 logger.info(f'Установлено соедение с ПК {client_address}')
                 self.clients.append(client)
+                print(self.clients)
 
             recv_data_lst = []
             send_data_lst = []
@@ -98,18 +99,22 @@ class Server(threading.Thread, metaclass=ServerMaker):
             try:
                 if self.clients:
                     recv_data_lst, send_data_lst, err_lst = select.select(self.clients, self.clients, [], 0)
-            except OSError:
-                pass
+            except OSError as error:
+                logger.error(f'Ошибка работы с сокетами: {error}')
 
             # принимаем сообщения и если ошибка, исключаем клиента.
             if recv_data_lst:
                 for client_with_message in recv_data_lst:
                     try:
                         self.process_client_message(get_message(client_with_message), client_with_message)
-                    except:
-
-                        logger.info(f'Клиент {client_with_message.getpeername()} отключился от сервера')
-
+                    except (OSError):
+                        # Ищем клиента в словаре клиентов и удаляем его из него и  базы подключённых
+                        logger.info(f'Клиент {client_with_message.getpeername()} отключился от сервера.')
+                        for name in self.names:
+                            if self.names[name] == client_with_message:
+                                self.database.user_logout(name)
+                                del self.names[name]
+                                break
                         self.clients.remove(client_with_message)
 
             # Если есть сообщения, обрабатываем каждое.
@@ -119,7 +124,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 except:
                     logger.info(f'Связь с клиентом с именем {message["to"]} была потеряна')
                     self.clients.remove(self.names[message['to']])
-
+                    self.database.user_logout(message['to'])
                     del self.names[message['to']]
             self.messages.clear()
 
@@ -185,7 +190,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
             self.names[message['user']] == client:
             response = {
                         'response': 202,
-                        'data_list':None
+                        'data_list': None
                         }
             response['data_list'] = self.database.get_contacts(message['user'])
             send_message(client, response)
@@ -205,7 +210,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
     # Если это запрос известных пользователей
         elif 'action' in message and message['action'] == 'get_users' and 'account_name' in message \
              and self.names[message['account_name']] == client:
-            response = {'response': 200}
+            response = {'response': 202}
             response['data_list'] = [user[0] for user in self.database.users_list()]
             send_message(client, response)
 

@@ -66,9 +66,12 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
             try:
                 send_message(self.sock, message_dict)
                 logger.info(f'Отправлено сообщение для пользователя {to}')
-            except:
-                logger.critical('Потеряно соединение с сервером.')
-                exit(1)
+            except OSError as err:
+                if err.errno:
+                    logger.critical('Потеряно соединение с сервером.')
+                    exit(1)
+                else:
+                    logger.error('Не удалось передать сообщение. Таймаут соединения')
 
     # Функция взаимодействия с пользователем, запрашивает команды, отправляет сообщения
     def run(self):
@@ -299,8 +302,11 @@ def user_list_request(sock, username):
         'time': time.time(),
         'account_name': username
     }
+    print(req)
     send_message(sock, req)
     ans = get_message(sock)
+    print('answer')
+    print(ans)
     if 'response' in ans and ans['response'] == 202:
         return ans['data_list']
     else:

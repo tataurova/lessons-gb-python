@@ -5,10 +5,11 @@ sys.path.append('../')
 
 
 # Утилита приёма и декодирования сообщения
-# принимает байты выдаёт словарь, если приняточто-то другое отдаёт ошибку значения
+# принимает байты, выдаёт словарь, если принято что-то другое, отдаёт ошибку значения
 
 def get_message(client):
     encoded_response = client.recv(1024)
+    print(encoded_response)
     if isinstance(encoded_response, bytes):
         json_response = encoded_response.decode('utf-8')
         response = json.loads(json_response)
