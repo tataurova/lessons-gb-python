@@ -14,14 +14,14 @@ from server_database import ServerStorage
 from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtCore import QTimer
 from server_gui import MainWindow, gui_create_model, HistoryWindow, create_stat_model, ConfigWindow
-from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from utils import get_message, send_message
+
 
 # Инициализация логирования сервера.
 logger = logging.getLogger('server')
 log = Log(logger)
 
-# Флаг, что был подключён новый пользователь, нужен чтобы к BD не было запросов на обновление
+# Флаг, что был подключён новый пользователь, нужен чтобы к БД не было запросов на обновление
 new_connection = False
 conflag_lock = threading.Lock()
 
@@ -50,13 +50,13 @@ class Server(threading.Thread, metaclass=ServerMaker):
         # База данных сервера
         self.database = database
 
-        # Список подключённых клиентов.
+        # Список подключённых клиентов
         self.clients = []
 
-        # Список сообщений на отправку.
+        # Список сообщений на отправку
         self.messages = []
 
-        # Словарь, содержащий сопоставленные имена и соответствующие им сокеты.
+        # Словарь, содержащий сопоставленные имена и соответствующие им сокеты
         self.names = dict()
 
         # Конструктор предка
@@ -72,17 +72,17 @@ class Server(threading.Thread, metaclass=ServerMaker):
         transport.bind((self.addr, self.port))
         transport.settimeout(0.5)
 
-        # Начинаем слушать сокет.
+        # Начинаем слушать сокет
         self.sock = transport
         self.sock.listen()
 
     def run(self):
-        # Инициализация Сокета
+        # Инициализация сокета
         self.init_socket()
 
         # Основной цикл программы сервера
         while True:
-            # Ждём подключения, если таймаут вышел, ловим исключение.
+            # Ждём подключения, если таймаут вышел, будет исключение
             try:
                 client, client_address = self.sock.accept()
             except OSError:
@@ -102,13 +102,13 @@ class Server(threading.Thread, metaclass=ServerMaker):
             except OSError as error:
                 logger.error(f'Ошибка работы с сокетами: {error}')
 
-            # принимаем сообщения и если ошибка, исключаем клиента.
+            # Принимаем сообщения и если ошибка, исключаем клиента.
             if recv_data_lst:
                 for client_with_message in recv_data_lst:
                     try:
                         self.process_client_message(get_message(client_with_message), client_with_message)
                     except (OSError):
-                        # Ищем клиента в словаре клиентов и удаляем его из него и  базы подключённых
+                        # Ищем клиента в словаре клиентов и удаляем его из него и базы подключённых
                         logger.info(f'Клиент {client_with_message.getpeername()} отключился от сервера.')
                         for name in self.names:
                             if self.names[name] == client_with_message:
@@ -117,7 +117,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
                                 break
                         self.clients.remove(client_with_message)
 
-            # Если есть сообщения, обрабатываем каждое.
+            # Если есть сообщения, обрабатываем каждое
             for message in self.messages:
                 try:
                     self.process_message(message, send_data_lst)

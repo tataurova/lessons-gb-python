@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QApplication, QLabel, QT
     QLineEdit, QFileDialog, QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtCore import Qt
-import os
 
 
 # GUI - Создание таблицы QModel, для отображения в окне программы.
@@ -151,7 +150,7 @@ class ConfigWindow(QDialog):
         self.db_path_select = QPushButton('Обзор...', self)
         self.db_path_select.move(275, 28)
 
-        # Функция обработчик открытия окна выбора папки
+        # Функция-обработчик открытия окна выбора папки
         def open_file_dialog():
             global dialog
             dialog = QFileDialog(self)
@@ -209,21 +208,7 @@ class ConfigWindow(QDialog):
 
 
 if __name__ == '__main__':
-    '''
-    app = QApplication(sys.argv)
-    ex = MainWindow()
-    ex.statusBar().showMessage('Test Statusbar Message')
-    test_list = QStandardItemModel(ex)
-    test_list.setHorizontalHeaderLabels(['Имя Клиента', 'IP Адрес', 'Порт', 'Время подключения'])
-    test_list.appendRow([QStandardItem('1'), QStandardItem('2'), QStandardItem('3')])
-    test_list.appendRow([QStandardItem('4'), QStandardItem('5'), QStandardItem('6')])
-    ex.active_clients_table.setModel(test_list)
-    ex.active_clients_table.resizeColumnsToContents()
-    print('JKJKJK')
-    app.exec_()
-    print('END')'''
     app = QApplication(sys.argv)
     message = QMessageBox
     dial = ConfigWindow()
-
     app.exec_()

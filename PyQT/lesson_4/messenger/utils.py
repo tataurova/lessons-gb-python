@@ -1,7 +1,5 @@
 from errors import IncorrectDataRecivedError, NonDictInputError
 import json
-import sys
-sys.path.append('../')
 
 
 # Утилита приёма и декодирования сообщения

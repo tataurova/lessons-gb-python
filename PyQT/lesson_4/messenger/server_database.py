@@ -37,7 +37,7 @@ class ServerStorage:
             self.user = user
             self.contact = contact
 
-    # Класс отображение таблицы истории действий
+    # Класс - отображение таблицы истории действий
     class UsersHistory:
         def __init__(self, user):
             self.id = None
@@ -112,7 +112,7 @@ class ServerStorage:
         self.session.query(self.ActiveUsers).delete()
         self.session.commit()
 
-    # Функция выполняющяяся при входе пользователя, записывает в базу факт входа
+    # Функция, выполняющяяся при входе пользователя, записывает в базу факт входа
     def user_login(self, username, ip_address, port):
         # Запрос в таблицу пользователей на наличие там пользователя с таким именем
         rez = self.session.query(self.AllUsers).filter_by(name=username)
@@ -121,16 +121,16 @@ class ServerStorage:
         if rez.count():
             user = rez.first()
             user.last_login = datetime.datetime.now()
-        # Если нету, то создаздаём нового пользователя
+        # Если нет, то создаздаём нового пользователя
         else:
             user = self.AllUsers(username)
             self.session.add(user)
-            # Комит здесь нужен, чтобы присвоился ID
+            # Коммит, чтобы присвоился ID
             self.session.commit()
             user_in_history = self.UsersHistory(user.id)
             self.session.add(user_in_history)
 
-        # Теперь можно создать запись в таблицу активных пользователей о факте входа.
+        # Теперь можно создать запись в таблицу активных пользователей о факте входа
         new_active_user = self.ActiveUsers(user.id, ip_address, port, datetime.datetime.now())
         self.session.add(new_active_user)
 
@@ -138,10 +138,10 @@ class ServerStorage:
         history = self.LoginHistory(user.id, datetime.datetime.now(), ip_address, port)
         self.session.add(history)
 
-        # Сохрраняем изменения
+        # Сохраняем изменения
         self.session.commit()
 
-    # Функция фиксирующая отключение пользователя
+    # Функция, фиксирующая отключение пользователя
     def user_logout(self, username):
         # Запрашиваем пользователя, что покидает нас
         user = self.session.query(self.AllUsers).filter_by(name=username).first()
@@ -165,13 +165,13 @@ class ServerStorage:
 
         self.session.commit()
 
-    # Функция добавляет контакт для пользователя.
+    # Функция добавляет контакт для пользователя
     def add_contact(self, user, contact):
         # Получаем ID пользователей
         user = self.session.query(self.AllUsers).filter_by(name=user).first()
         contact = self.session.query(self.AllUsers).filter_by(name=contact).first()
 
-        # Проверяем что не дубль и что контакт может существовать (полю пользователь мы доверяем)
+        # Проверяем, что не дубль и что контакт может существовать (полю пользователь мы доверяем)
         if not contact or self.session.query(self.UsersContacts).filter_by(user=user.id, contact=contact.id).count():
             return
 
@@ -186,7 +186,7 @@ class ServerStorage:
         user = self.session.query(self.AllUsers).filter_by(name=user).first()
         contact = self.session.query(self.AllUsers).filter_by(name=contact).first()
 
-        # Проверяем что контакт может существовать (полю пользователь мы доверяем)
+        # Проверяем, что контакт может существовать (полю пользователь мы доверяем)
         if not contact:
             return
 
@@ -219,7 +219,7 @@ class ServerStorage:
         # Возвращаем список кортежей
         return query.all()
 
-    # Функция возвращающаяя историю входов по пользователю или всем пользователям
+    # Функция, возвращающаяя историю входов по пользователю или всем пользователям
     def login_history(self, username=None):
         # Запрашиваем историю входа
         query = self.session.query(self.AllUsers.name,
@@ -243,7 +243,7 @@ class ServerStorage:
             filter_by(user=user.id). \
             join(self.AllUsers, self.UsersContacts.contact == self.AllUsers.id)
 
-        # выбираем только имена пользователей и возвращаем их.
+        # Выбираем только имена пользователей и возвращаем их.
         return [contact[1] for contact in query.all()]
 
     # Функция возвращает количество переданных и полученных сообщений
@@ -264,12 +264,5 @@ if __name__ == '__main__':
     test_db.user_login('1111', '192.168.1.113', 8080)
     test_db.user_login('McG2', '192.168.1.113', 8081)
     print(test_db.users_list())
-    # print(test_db.active_users_list())
-    # test_db.user_logout('McG')
-    # print(test_db.login_history('re'))
-    # test_db.add_contact('test2', 'test1')
-    # test_db.add_contact('test1', 'test3')
-    # test_db.add_contact('test1', 'test6')
-    # test_db.remove_contact('test1', 'test3')
     test_db.process_message('McG2', '1111')
     print(test_db.message_history())

@@ -1,7 +1,5 @@
 from socket import socket
-#from utils import send_message, get_message, translate_message
 from log.client_log_config import *
-from log.decorators import Log
 import sys
 import json
 import socket
@@ -23,7 +21,7 @@ sock_lock = threading.Lock()
 database_lock = threading.Lock()							
 
 
-# Класс формировки и отправки сообщений на сервер и взаимодействия с пользователем.
+# Класс формировки и отправки сообщений на сервер и взаимодействия с пользователем
 class ClientSender(threading.Thread, metaclass=ClientMaker):
     def __init__(self, account_name, sock, database):
         self.account_name = account_name
@@ -31,7 +29,7 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
         self.database = database
         super().__init__()
 
-    # Функция создаёт словарь с сообщением о выходе.
+    # Функция создаёт словарь с сообщением о выходе
     def create_exit_message(self):
         return {
             'action': 'exit',
@@ -106,7 +104,7 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
             elif command == 'edit':
                 self.edit_contacts()
 
-            # история сообщений.
+            # История сообщений.
             elif command == 'history':
                 self.print_history()
 
@@ -202,6 +200,7 @@ class ClientReader(threading.Thread, metaclass=ClientMaker):
                         with database_lock:
                             try:
                                 self.database.save_message(message['from'], self.account_name, message['mess_text'])
+                                logger.info(f'Записано сообщени в БД от {message["from"]}: {message["mess_text"]}')
                             except:
                                 logger.error('Ошибка взаимодействия с базой данных')
 
@@ -223,7 +222,7 @@ def create_presence(account_name):
     return out
 
 
-# Функция разбирает ответ сервера на сообщение о присутствии, возращает 200 если все ОК или генерирует исключение при\
+# Функция разбирает ответ сервера на сообщение о присутствии, возращает 200 если все ОК или генерирует исключение при
 # ошибке.
 
 def process_response_ans(message):
@@ -258,7 +257,7 @@ def arg_parser():
     return server_address, server_port, client_name
 
 
-# Функция запрос контакт листа
+# Функция-запрос контакт листа
 def contacts_list_request(sock, name):
     logger.debug(f'Запрос контакт листа для пользователся {name}')
     req = {
@@ -276,7 +275,7 @@ def contacts_list_request(sock, name):
         raise ServerError
 
 
-# Функция добавления пользователя в контакт лист
+# Функция добавления пользователя в контакт-лист
 def add_contact(sock, username, contact):
     logger.debug(f'Создание контакта {contact}')
     req = {
@@ -313,7 +312,7 @@ def user_list_request(sock, username):
         raise ServerError
 
 
-# Функция удаления пользователя из контакт листа
+# Функция удаления пользователя из контакт-листа
 def remove_contact(sock, username, contact):
     logger.debug(f'Создание контакта {contact}')
     req = {
@@ -331,7 +330,7 @@ def remove_contact(sock, username, contact):
     print('Удачное удаление')
 
 
-# Функция инициализатор базы данных. Запускается при запуске, загружает данные в базу с сервера.
+# Функция-инициализатор базы данных. Запускается при запуске, загружает данные в базу с сервера.
 def database_load(sock, database, username):
     # Загружаем список известных пользователей
     try:
@@ -353,9 +352,9 @@ def database_load(sock, database, username):
 
 def main():
     # Сообщаем о запуске
-    print('Консольный месседжер. Клиентский модуль.')
+    print('Консольный мессенджер. Клиентский модуль.')
 
-    # Загружаем параметы коммандной строки
+    # Загружаем параметы командной строки
     server_address, server_port, client_name = arg_parser()
 
     # Если имя пользователя не было задано, необходимо запросить пользователя.
