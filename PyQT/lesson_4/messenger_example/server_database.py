@@ -137,6 +137,7 @@ class ServerStorage:
 
         # и сохранить в историю входов
         history = self.LoginHistory(user.id, datetime.datetime.now(), ip_address, port)
+        print(history)
         self.session.add(history)
 
         # Сохрраняем изменения

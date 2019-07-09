@@ -1,6 +1,13 @@
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey, DateTime
 from sqlalchemy.orm import mapper, sessionmaker
 import datetime
+import logging
+from log.server_log_config import *
+from log.decorators import Log
+
+# Инициализация логирования сервера.
+logger = logging.getLogger('server')
+log = Log(logger)
 
 
 # Класс - серверная база данных:
@@ -162,7 +169,7 @@ class ServerStorage:
         sender_row.sent += 1
         recipient_row = self.session.query(self.UsersHistory).filter_by(user=recipient).first()
         recipient_row.accepted += 1
-
+        logger.info(f'Записано в БД accepted {"accepted"}')
         self.session.commit()
 
     # Функция добавляет контакт для пользователя

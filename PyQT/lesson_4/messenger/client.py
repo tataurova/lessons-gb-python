@@ -5,16 +5,18 @@ import json
 import socket
 import time
 import argparse
-import logging
 import threading
+import logging
 from utils import get_message, send_message
 from metaclasses import ClientMaker
 from errors import IncorrectDataRecivedError, ServerError, ReqFieldMissingError
 from client_database import ClientDatabase
-
+from log.client_log_config import *
+from log.decorators import Log
 
 # Инициализация клиентского логера
 logger = logging.getLogger('client')
+log = Log(logger)
 
 # Объект блокировки сокета и работы с базой данных
 sock_lock = threading.Lock()
@@ -210,6 +212,7 @@ class ClientReader(threading.Thread, metaclass=ClientMaker):
 
 
 # Функция генерирует запрос о присутствии клиента
+@log
 def create_presence(account_name):
     out = {
         'action': 'presence',
@@ -224,7 +227,7 @@ def create_presence(account_name):
 
 # Функция разбирает ответ сервера на сообщение о присутствии, возращает 200 если все ОК или генерирует исключение при
 # ошибке.
-
+@log
 def process_response_ans(message):
     logger.debug(f'Разбор приветственного сообщения от сервера: {message}')
     if 'response' in message:
@@ -236,7 +239,7 @@ def process_response_ans(message):
 
 
 # Парсер аргументов коммандной строки
-
+@log
 def arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('addr', default='127.0.0.1', nargs='?')
@@ -301,11 +304,8 @@ def user_list_request(sock, username):
         'time': time.time(),
         'account_name': username
     }
-    print(req)
     send_message(sock, req)
     ans = get_message(sock)
-    print('answer')
-    print(ans)
     if 'response' in ans and ans['response'] == 202:
         return ans['data_list']
     else:

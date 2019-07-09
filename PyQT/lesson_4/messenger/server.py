@@ -26,8 +26,8 @@ new_connection = False
 conflag_lock = threading.Lock()
 
 
-# Парсер аргументов командной строки.
-
+# Парсер аргументов командной строки
+@log
 def arg_parser(default_port, default_address):
     parser = argparse.ArgumentParser()
     parser.add_argument('-p', default=default_port, type=int, nargs='?')
@@ -89,9 +89,8 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 pass
             else:
                 logger.info(f'Установлено соедение с ПК {client_address}')
+                print(f'Установлено соедение с ПК {client_address}')
                 self.clients.append(client)
-                print(self.clients)
-
             recv_data_lst = []
             send_data_lst = []
 
@@ -134,6 +133,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
         if message['to'] in self.names and self.names[message['to']] in listen_socks:
             send_message(self.names[message['to']], message)
             logger.info(f'Отправлено сообщение пользователю {message["to"]} от пользователя {message["from"]}.')
+            print(f'Отправлено сообщение пользователю {message["to"]} от пользователя {message["from"]}.')
         elif message['to'] in self.names and self.names[message['to']] not in listen_socks:
             raise ConnectionError
         else:
@@ -170,9 +170,9 @@ class Server(threading.Thread, metaclass=ServerMaker):
 
         # Если это сообщение, то добавляем его в очередь сообщений. Ответ не требуется.
         elif 'action' in message and message['action'] == 'message' and 'to' in message and 'time' in message \
-                and 'from' in message and 'mess_text' in message:
+                and 'from' in message and 'mess_text' in message and self.names[message['from']] == client:
             self.messages.append(message)
-
+            self.database.process_message(message['from'], message['to'])
             return
 
         # Если клиент выходит
@@ -298,7 +298,6 @@ def main():
             config['SETTINGS']['Listen_Address'] = config_window.ip.text()
             if 1023 < port < 65536:
                 config['SETTINGS']['Default_port'] = str(port)
-                print(port)
                 with open('server.ini', 'w') as conf:
                     config.write(conf)
                     message.information(config_window, 'OK', 'Настройки успешно сохранены!')

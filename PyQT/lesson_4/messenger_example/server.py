@@ -169,6 +169,8 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 and SENDER in message and MESSAGE_TEXT in message and self.names[message[SENDER]] == client:
             self.messages.append(message)
             self.database.process_message(message[SENDER], message[DESTINATION])
+            print(message[SENDER])
+            print(message[DESTINATION])
             return
 
         # Если клиент выходит

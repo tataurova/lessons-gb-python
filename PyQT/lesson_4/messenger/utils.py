@@ -1,5 +1,7 @@
 from errors import IncorrectDataRecivedError, NonDictInputError
 import json
+import sys
+sys.path.append('../')
 
 
 # Утилита приёма и декодирования сообщения
@@ -7,7 +9,6 @@ import json
 
 def get_message(client):
     encoded_response = client.recv(1024)
-    print(encoded_response)
     if isinstance(encoded_response, bytes):
         json_response = encoded_response.decode('utf-8')
         response = json.loads(json_response)
