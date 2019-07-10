@@ -1,9 +1,9 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QApplication, QLabel, QTableView, QDialog, QPushButton, \
-    QLineEdit, QFileDialog, QMessageBox
+    QLineEdit, QFileDialog , QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QIcon
+import os
 
 
 # GUI - Создание таблицы QModel, для отображения в окне программы.
@@ -26,7 +26,7 @@ def gui_create_model(database):
     return list
 
 
-# GUI - Функция, реализующая заполнение таблицы историей сообщений.
+# GUI - Функция реализующая заполнение таблицы историей сообщений.
 def create_stat_model(database):
     # Список записей из базы
     hist_list = database.message_history()
@@ -65,16 +65,15 @@ class MainWindow(QMainWindow):
         self.refresh_button = QAction('Обновить список', self)
 
         # Кнопка настроек сервера
-        self.config_btn = QAction('Настройки сервера', self)
+        self.config_btn = QAction('Настройки сервера' , self)
 
         # Кнопка вывести историю сообщений
         self.show_history_button = QAction('История клиентов', self)
 
         # Статусбар
-        # dock widget
         self.statusBar()
 
-        # Тулбара
+        # Тулбар
         self.toolbar = self.addToolBar('MainBar')
         self.toolbar.addAction(exitAction)
         self.toolbar.addAction(self.refresh_button)
@@ -82,10 +81,9 @@ class MainWindow(QMainWindow):
         self.toolbar.addAction(self.config_btn)
 
         # Настройки геометрии основного окна
-        # Размер окна фиксирован.
+        # Поскольку работать с динамическими размерами мы не умеем, и мало времени на изучение, размер окна фиксирован.
         self.setFixedSize(800, 600)
-        self.setWindowTitle('Сервер для обмена сообщениями')
-        self.setWindowIcon(QIcon('icon_messages.png'))
+        self.setWindowTitle('Messaging Server alpha release')
 
         # Надпись о том, что ниже список подключённых клиентов
         self.label = QLabel('Список подключённых клиентов:', self)
@@ -110,7 +108,6 @@ class HistoryWindow(QDialog):
     def initUI(self):
         # Настройки окна:
         self.setWindowTitle('Статистика клиентов')
-        self.setWindowIcon(QIcon('icon_male.png'))
         self.setFixedSize(600, 700)
         self.setAttribute(Qt.WA_DeleteOnClose)
 
@@ -119,7 +116,7 @@ class HistoryWindow(QDialog):
         self.close_button.move(250, 650)
         self.close_button.clicked.connect(self.close)
 
-        # Лист с историей
+        # Лист с собственно историей
         self.history_table = QTableView(self)
         self.history_table.move(10, 10)
         self.history_table.setFixedSize(580, 620)
@@ -137,7 +134,6 @@ class ConfigWindow(QDialog):
         # Настройки окна
         self.setFixedSize(365, 260)
         self.setWindowTitle('Настройки сервера')
-        self.setWindowIcon(QIcon('icon_settings.png'))
 
         # Надпись о файле базы данных:
         self.db_path_label = QLabel('Путь до файла базы данных: ', self)
@@ -150,16 +146,17 @@ class ConfigWindow(QDialog):
         self.db_path.move(10, 30)
         self.db_path.setReadOnly(True)
 
-        # Кнопка выбора пути
+        # Кнопка выбора пути.
         self.db_path_select = QPushButton('Обзор...', self)
         self.db_path_select.move(275, 28)
 
-        # Функция-обработчик открытия окна выбора папки
+        # Функция обработчик открытия окна выбора папки
         def open_file_dialog():
             global dialog
             dialog = QFileDialog(self)
             path = dialog.getExistingDirectory()
             path = path.replace('/', '\\')
+            self.db_path.clear()
             self.db_path.insert(path)
 
         self.db_path_select.clicked.connect(open_file_dialog)
@@ -212,7 +209,21 @@ class ConfigWindow(QDialog):
 
 
 if __name__ == '__main__':
+    '''
+    app = QApplication(sys.argv)
+    ex = MainWindow()
+    ex.statusBar().showMessage('Test Statusbar Message')
+    test_list = QStandardItemModel(ex)
+    test_list.setHorizontalHeaderLabels(['Имя Клиента', 'IP Адрес', 'Порт', 'Время подключения'])
+    test_list.appendRow([QStandardItem('1'), QStandardItem('2'), QStandardItem('3')])
+    test_list.appendRow([QStandardItem('4'), QStandardItem('5'), QStandardItem('6')])
+    ex.active_clients_table.setModel(test_list)
+    ex.active_clients_table.resizeColumnsToContents()
+    print('JKJKJK')
+    app.exec_()
+    print('END')'''
     app = QApplication(sys.argv)
     message = QMessageBox
     dial = ConfigWindow()
+
     app.exec_()

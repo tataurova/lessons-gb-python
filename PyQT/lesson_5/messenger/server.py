@@ -12,7 +12,7 @@ from log.server_log_config import *
 from log.decorators import Log
 from server_database import ServerStorage
 from server_gui import MainWindow, gui_create_model, HistoryWindow, create_stat_model, ConfigWindow
-from utils import get_message, send_message
+from utils.utils import get_message, send_message
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QPixmap
@@ -78,6 +78,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
 
     def run(self):
         # Инициализация сокета
+        global new_connection
         self.init_socket()
 
         # Основной цикл программы сервера
@@ -101,7 +102,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
             except OSError as error:
                 logger.error(f'Ошибка работы с сокетами: {error}')
 
-            # Принимаем сообщения и если ошибка, исключаем клиента.
+            # Принимаем сообщения и если ошибка, исключаем клиента
             if recv_data_lst:
                 for client_with_message in recv_data_lst:
                     try:
@@ -115,6 +116,8 @@ class Server(threading.Thread, metaclass=ServerMaker):
                                 del self.names[name]
                                 break
                         self.clients.remove(client_with_message)
+                        with conflag_lock:
+                            new_connection = True
 
             # Если есть сообщения, обрабатываем каждое
             for message in self.messages:
@@ -125,6 +128,8 @@ class Server(threading.Thread, metaclass=ServerMaker):
                     self.clients.remove(self.names[message['to']])
                     self.database.user_logout(message['to'])
                     del self.names[message['to']]
+                    with conflag_lock:
+                        new_connection = True
             self.messages.clear()
 
     # Функция адресной отправки сообщения определённому клиенту. Принимает словарь - сообщение, список зарегистрированых
@@ -225,13 +230,29 @@ class Server(threading.Thread, metaclass=ServerMaker):
             return
 
 
-def main():
+def config_load():
     # Загрузка файла конфигурации сервера
     config = configparser.ConfigParser()
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     config.read(f"{dir_path}/{'server.ini'}")
+
+    # Если конфиг файл загружен правильно, запускаемся, иначе конфиг по умолчанию.
+    if 'SETTINGS' in config:
+        return config
+    else:
+        config.add_section('SETTINGS')
+        config.set('SETTINGS', 'Default_port', str(DEFAULT_PORT))
+        config.set('SETTINGS', 'Listen_Address', '')
+        config.set('SETTINGS', 'Database_path', '')
+        config.set('SETTINGS', 'Database_file', 'server_database.db3')
+        return config
+
+
+def main():
+    # Загрузка файла конфигурации сервера
+    config = config_load()
 
     # Загрузка параметров командной строки, если нет параметров, то задаём значения по умоланию.
     listen_address, listen_port = arg_parser(config['SETTINGS']['Default_port'], config['SETTINGS']['Listen_Address'])
@@ -303,7 +324,8 @@ def main():
             config['SETTINGS']['Listen_Address'] = config_window.ip.text()
             if 1023 < port < 65536:
                 config['SETTINGS']['Default_port'] = str(port)
-                with open('server.ini', 'w') as conf:
+                dir_path = os.path.dirname(os.path.realpath(__file__))
+                with open(f"{dir_path}/{'server.ini'}", 'w') as conf:
                     config.write(conf)
                     message.information(config_window, 'OK', 'Настройки успешно сохранены!')
             else:
