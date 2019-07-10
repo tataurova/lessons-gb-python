@@ -5,10 +5,10 @@ import sys
 from PyQt5.QtWidgets import QApplication
 
 from errors import ServerError
-
+from client.main_window import ClientMainWindow
 from client.database import ClientDatabase
 from client.transport import ClientTransport
-from client.main_window import ClientMainWindow
+#from client.main_window import ClientMainWindow
 from client.start_dialog import UserNameDialog
 
 # Инициализация клиентского логера
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     # Создаём GUI
     main_window = ClientMainWindow(database, transport)
     main_window.make_connection(transport)
-    main_window.setWindowTitle(f'Чат Программа alpha release - {client_name}')
+    main_window.setWindowTitle(f'Клиентское подключение к серверу - {client_name}')
     client_app.exec_()
 
     # Раз графическая оболочка закрылась, закрываем транспорт

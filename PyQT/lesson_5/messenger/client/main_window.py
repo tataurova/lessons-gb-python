@@ -2,12 +2,16 @@ from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtCore import pyqtSlot, Qt
 import sys
+import json
 import logging
 
 sys.path.append('../')
-from client.main_window_conv import Ui_MainClientWindow
+from client.main_window_conv import UiMainClientWindow
 from client.add_contact import AddContactDialog
 from client.del_contact import DelContactDialog
+from client.database import ClientDatabase
+from client.transport import ClientTransport
+from client.start_dialog import UserNameDialog
 from errors import ServerError
 
 logger = logging.getLogger('client')
@@ -22,7 +26,7 @@ class ClientMainWindow(QMainWindow):
         self.transport = transport
 
         # Загружаем конфигурацию окна из дизайнера
-        self.ui = Ui_MainClientWindow()
+        self.ui = UiMainClientWindow()
         self.ui.setupUi(self)
 
         # Кнопка "Выход"
@@ -151,7 +155,7 @@ class ClientMainWindow(QMainWindow):
             if err.errno:
                 self.messages.critical(self, 'Ошибка', 'Потеряно соединение с сервером!')
                 self.close()
-            self.messages.critical(self, 'Ошибка', 'Таймаут соединения!')
+            self.messages.critical(self, 'Ошибка', 'Таймаут соединения! OSError add contact')
         else:
             self.database.add_contact(new_contact)
             new_contact = QStandardItem(new_contact)
@@ -178,7 +182,7 @@ class ClientMainWindow(QMainWindow):
             if err.errno:
                 self.messages.critical(self, 'Ошибка', 'Потеряно соединение с сервером!')
                 self.close()
-            self.messages.critical(self, 'Ошибка', 'Таймаут соединения!')
+            self.messages.critical(self, 'Ошибка', 'Таймаут соединения! OSError delete contact')
         else:
             self.database.del_contact(selected)
             self.clients_list_update()
@@ -199,6 +203,7 @@ class ClientMainWindow(QMainWindow):
             return
         try:
             self.transport.send_message(self.current_chat, message_text)
+            logger.critical(f'Попытка отправить сообщение {self.current_chat} {message_text}')
             print(message_text)
             pass
         except ServerError as err:
@@ -207,7 +212,7 @@ class ClientMainWindow(QMainWindow):
             if err.errno:
                 self.messages.critical(self, 'Ошибка', 'Потеряно соединение с сервером!')
                 self.close()
-            self.messages.critical(self, 'Ошибка', 'Таймаут соединения!')
+            self.messages.critical(self, 'Ошибка', 'Таймаут соединения! OSError send message')
             print(err)
         except (ConnectionResetError, ConnectionAbortedError):
             self.messages.critical(self, 'Ошибка', 'Потеряно соединение с сервером!')

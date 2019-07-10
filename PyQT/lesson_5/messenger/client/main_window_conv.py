@@ -8,7 +8,8 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_MainClientWindow(object):
+
+class UiMainClientWindow(object):
     def setupUi(self, MainClientWindow):
         MainClientWindow.setObjectName("MainClientWindow")
         MainClientWindow.resize(756, 534)

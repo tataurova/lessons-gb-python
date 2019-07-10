@@ -5,40 +5,14 @@ import logging
 import json
 import threading
 from PyQt5.QtCore import pyqtSignal, QObject
-#from utils import send_message, get_message
-from errors import ServerError, IncorrectDataRecivedError, NonDictInputError
 
 sys.path.append('../')
+from errors import ServerError
+from common.utils import *
 
 # Логер и объект блокировки для работы с сокетом.
 logger = logging.getLogger('client')
 socket_lock = threading.Lock()
-
-
-
-def get_message(client):
-    encoded_response = client.recv(1024)
-    if isinstance(encoded_response, bytes):
-        json_response = encoded_response.decode('utf-8')
-        response = json.loads(json_response)
-        if isinstance(response, dict):
-            return response
-        else:
-            raise IncorrectDataRecivedError
-    else:
-        raise IncorrectDataRecivedError
-
-
-# Утилита кодирования и отправки сообщения
-# принимает словарь и отправляет его
-
-def send_message(sock, message):
-    if not isinstance(message, dict):
-        raise NonDictInputError
-    js_message = json.dumps(message)
-    encoded_message = js_message.encode('utf-8')
-    sock.send(encoded_message)
-
 
 
 # Класс - транспорт, отвечает за взаимодействие с сервером
@@ -83,7 +57,7 @@ class ClientTransport(threading.Thread, QObject):
         # Таймаут необходим для освобождения сокета.
         self.transport.settimeout(5)
 
-        # Соединяемся, 5 попыток соединения, флаг успеха ставим в True если удалось
+        # Соединяемся, 5 попыток соединения, флаг успеха ставим в True, если удалось
         connected = False
         for i in range(5):
             logger.info(f'Попытка подключения №{i + 1}')
@@ -147,7 +121,6 @@ class ClientTransport(threading.Thread, QObject):
             self.database.save_message(message['from'], 'in', message['mess_text'])
             self.new_message.emit(message['from'])
 
-
     # Функция, обновляющая контакт - лист с сервера
     def contacts_list_update(self):
         logger.debug(f'Запрос контакт листа для пользователся {self.name}')
@@ -183,7 +156,7 @@ class ClientTransport(threading.Thread, QObject):
         else:
             logger.error('Не удалось обновить список известных пользователей.')
 
-    # Функция сообщающая на сервер о добавлении нового контакта
+    # Функция, сообщающая на сервер о добавлении нового контакта
     def add_contact(self, contact):
         logger.debug(f'Создание контакта {contact}')
         req = {

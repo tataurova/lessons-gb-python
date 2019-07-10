@@ -166,7 +166,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
             else:
                 response = {
                     'response': 400,
-                    'error': 'Имя пользователя уже занято'
+                    'error': None
                 }
                 send_message(client, response)
                 self.clients.remove(client)
@@ -199,7 +199,10 @@ class Server(threading.Thread, metaclass=ServerMaker):
                         'data_list': None
                         }
             response['data_list'] = self.database.get_contacts(message['user'])
+            logger.debug(f'process client message {response["data_list"]}')
             send_message(client, response)
+            logger.debug(f'process client message sent message {send_message(client, response)}')
+
 
     # Если это добавление контакта
         elif 'action' in message and message['action'] == 'add' and 'account_name' in message and 'user' in message \

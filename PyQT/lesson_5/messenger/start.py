@@ -30,7 +30,7 @@ while True:
                 clients_count = int(action)
                 for i in range(clients_count):
                     # Запускаем клиентский скрипт и добавляем его в список процессов
-                    p_list.append(Popen(f'python client.py -n user{i + 1}',
+                    p_list.append(Popen(f'python client.py -n tester{i + 1}',
                                         creationflags=CREATE_NEW_CONSOLE))
                 print('Клиенты запущены')
             else:
