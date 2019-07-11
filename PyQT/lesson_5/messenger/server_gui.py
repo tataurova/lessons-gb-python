@@ -6,7 +6,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
 
 
-# GUI - Создание таблицы QModel, для отображения в окне программы.
+# GUI - Создание таблицы QModel, для отображения в окне программы
 def gui_create_model(database):
     list_users = database.active_users_list()
     list = QStandardItemModel()
@@ -19,7 +19,7 @@ def gui_create_model(database):
         ip.setEditable(False)
         port = QStandardItem(str(port))
         port.setEditable(False)
-        # Уберём милисекунды из строки времени, т.к. такая точность не требуется.
+        # Уберём милисекунды из строки времени, т.к. такая точность не требуется
         time = QStandardItem(str(time.replace(microsecond=0)))
         time.setEditable(False)
         list.appendRow([user, ip, port, time])
@@ -172,7 +172,7 @@ class ConfigWindow(QDialog):
         # Поле для ввода имени файла
         self.db_file = QLineEdit(self)
         self.db_file.move(200, 66)
-        self.db_file.setFixedSize(150 , 20)
+        self.db_file.setFixedSize(150, 20)
 
         # Метка с номером порта
         self.port_label = QLabel('Номер порта для соединений:', self)
@@ -200,8 +200,8 @@ class ConfigWindow(QDialog):
         self.ip.setFixedSize(150, 20)
 
         # Кнопка сохранения настроек
-        self.save_btn = QPushButton('Сохранить' , self)
-        self.save_btn.move(190 , 220)
+        self.save_btn = QPushButton('Сохранить', self)
+        self.save_btn.move(190, 220)
 
         # Кнапка закрытия окна
         self.close_button = QPushButton('Закрыть', self)

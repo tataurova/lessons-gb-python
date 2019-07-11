@@ -9,10 +9,36 @@ from PyQt5.QtCore import pyqtSignal, QObject
 sys.path.append('../')
 from errors import ServerError
 from utils import *
+from errors import IncorrectDataRecivedError, NonDictInputError
+
 
 # Логер и объект блокировки для работы с сокетом.
 logger = logging.getLogger('client')
 socket_lock = threading.Lock()
+
+
+def get_message(client):
+    encoded_response = client.recv(1024)
+    if isinstance(encoded_response, bytes):
+        json_response = encoded_response.decode('utf-8')
+        response = json.loads(json_response)
+        if isinstance(response, dict):
+            return response
+        else:
+            raise IncorrectDataRecivedError
+    else:
+        raise IncorrectDataRecivedError
+
+
+# Утилита кодирования и отправки сообщения
+# принимает словарь и отправляет его
+
+def send_message(sock, message):
+    if not isinstance(message, dict):
+        raise NonDictInputError
+    js_message = json.dumps(message)
+    encoded_message = js_message.encode('utf-8')
+    sock.send(encoded_message)
 
 
 # Класс - транспорт, отвечает за взаимодействие с сервером
@@ -37,14 +63,16 @@ class ClientTransport(threading.Thread, QObject):
         # Обновляем таблицы известных пользователей и контактов
         try:
             self.user_list_update()
+            logger.info(f'user_list_update {self.user_list_update()}')
             self.contacts_list_update()
+            logger.info(f'contacts_list_update {self.contacts_list_update()}')
         except OSError as err:
             if err.errno:
-                logger.critical(f'Потеряно соединение с сервером.')
+                logger.critical(f'Потеряно соединение с сервером')
                 raise ServerError('Потеряно соединение с сервером!')
-            logger.error('Timeout соединения при обновлении списков пользователей.')
+            logger.error('Timeout соединения при обновлении списков пользователей')
         except json.JSONDecodeError:
-            logger.critical(f'Потеряно соединение с сервером.')
+            logger.critical(f'Потеряно соединение с сервером')
             raise ServerError('Потеряно соединение с сервером!')
             # Флаг продолжения работы транспорта.
         self.running = True
@@ -140,7 +168,7 @@ class ClientTransport(threading.Thread, QObject):
         else:
             logger.error('Не удалось обновить список контактов.')
 
-    # Функция обновления таблицы известных пользователей.
+    # Функция обновления таблицы известных пользователей
     def user_list_update(self):
         logger.debug(f'Запрос списка известных пользователей {self.username}')
         req = {
@@ -182,7 +210,7 @@ class ClientTransport(threading.Thread, QObject):
             send_message(self.transport, req)
             self.process_server_ans(get_message(self.transport))
 
-    # Функция закрытия соединения, отправляет сообщение о выходе.
+    # Функция закрытия соединения, отправляет сообщение о выходе
     def transport_shutdown(self):
         self.running = False
         message = {
@@ -216,7 +244,7 @@ class ClientTransport(threading.Thread, QObject):
             logger.info(f'Отправлено сообщение для пользователя {to}')
 
     def run(self):
-        logger.debug('Запущен процесс - приёмник собщений с сервера.')
+        logger.debug('Запущен процесс - приёмник собщений с сервера')
         while self.running:
             # Отдыхаем секунду и снова пробуем захватить сокет.
             # если не сделать тут задержку, то отправка может достаточно долго ждать освобождения сокета.
@@ -227,12 +255,12 @@ class ClientTransport(threading.Thread, QObject):
                     message = get_message(self.transport)
                 except OSError as err:
                     if err.errno:
-                        logger.critical(f'Потеряно соединение с сервером.')
+                        logger.critical(f'Потеряно соединение с сервером')
                         self.running = False
                         self.connection_lost.emit()
                 # Проблемы с соединением
                 except (ConnectionError, ConnectionAbortedError, ConnectionResetError, json.JSONDecodeError, TypeError):
-                    logger.debug(f'Потеряно соединение с сервером.')
+                    logger.debug(f'Потеряно соединение с сервером')
                     self.running = False
                     self.connection_lost.emit()
                 # Если сообщение получено, то вызываем функцию обработчик:

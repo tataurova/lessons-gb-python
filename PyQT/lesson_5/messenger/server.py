@@ -200,9 +200,9 @@ class Server(threading.Thread, metaclass=ServerMaker):
                         'response': 202,
                         'data_list': self.database.get_contacts(message['user'])
                         }
-            logger.debug(f'Запрос контакт-листа get_contacts из БД: {response["data_list"]}')
+            logger.debug(f'Запрос контакт-листа get_contacts из БД {self.database}: {response["data_list"]}')
             send_message(client, response)
-            logger.debug(f'process client message sent message {send_message(client, response)}')
+            logger.debug(f'process client message send message {send_message(client, response)}')
 
     # Если это добавление контакта
         elif 'action' in message and message['action'] == 'add' and 'account_name' in message and 'user' in message \
@@ -232,7 +232,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
             send_message(client, response)
             return
 
-
+@log
 def config_load():
     # Загрузка файла конфигурации сервера
     config = configparser.ConfigParser()
@@ -253,6 +253,7 @@ def config_load():
         return config
 
 
+@log
 def main():
     # Загрузка файла конфигурации сервера
     config = config_load()

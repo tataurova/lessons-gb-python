@@ -244,12 +244,12 @@ class ServerStorage:
     def get_contacts(self, username):
         # Запрашивааем указанного пользователя
         user = self.session.query(self.AllUsers).filter_by(name=username).one()
-
+        logger.info(f'Вызвана функция get_contacts, запрошен список контактов {user}')
         # Запрашиваем его список контактов
         query = self.session.query(self.UsersContacts, self.AllUsers.name). \
             filter_by(user=user.id). \
             join(self.AllUsers, self.UsersContacts.contact == self.AllUsers.id)
-
+        logger.info(f'Вызвана функция get_contacts, запрошен список контактов {query}')
         # Выбираем только имена пользователей и возвращаем их.
         return [contact[1] for contact in query.all()]
 

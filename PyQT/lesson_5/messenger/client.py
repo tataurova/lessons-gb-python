@@ -3,10 +3,10 @@ import argparse
 import sys
 from PyQt5.QtWidgets import QApplication
 from errors import ServerError
-from main_window import ClientMainWindow
-from database import ClientDatabase
-from transport import ClientTransport
-from start_dialog import UserNameDialog
+from client.main_window import ClientMainWindow
+from client.database import ClientDatabase
+from client.transport import ClientTransport
+from client.start_dialog import UserNameDialog
 from log.client_log_config import *
 from log.decorators import Log
 
