@@ -1,6 +1,6 @@
 import socket
 import select
-from descriptors import Port
+from log.descriptors import Port
 from metaclasses import ServerMaker
 import sys
 import os
@@ -160,15 +160,17 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 client_ip, client_port = client.getpeername()
                 self.database.user_login(message['user']['account_name'], client_ip, client_port)
                 send_message(client, {'response': 200})
+                logger.debug(f'Клиенту {client} отправлен ответ 200')
                 with conflag_lock:
                     new_connection = True
 
             else:
                 response = {
                     'response': 400,
-                    'error': None
+                    'error': 'Имя пользователя занято'
                 }
                 send_message(client, response)
+                logger.debug(f'Клиенту {client} отправлен ответ 400')
                 self.clients.remove(client)
                 client.close()
             return
@@ -181,28 +183,26 @@ class Server(threading.Thread, metaclass=ServerMaker):
             return
 
         # Если клиент выходит
-        elif 'action' in message and message['action'] == 'exit' and 'account_name' in message:
-
+        elif 'action' in message and message['action'] == 'exit' and 'account_name' in message \
+				and self.names[message['account_name']] == client:
             self.database.user_logout(message['account_name'])
-            self.clients.remove(self.names['account_name'])
-            self.names['account_name'].close()
-            del self.names['account_name']
+            logger.info(f'Клиент {message["account_name"]} корректно отключился от сервера.')
+            self.clients.remove(self.names[message['account_name']])
+            self.names[message['account_name']].close()
+            del self.names[message['account_name']]
             with conflag_lock:
                 new_connection = True
             return
 
         # Если это запрос контакт-листа
-        elif 'action' in message and message['action'] == 'get_contacts' and 'user' in message and \
-            self.names[message['user']] == client:
+        elif 'action' in message and message['action'] == 'get_contacts' and 'user' in message and self.names[message['user']] == client:
             response = {
                         'response': 202,
-                        'data_list': None
+                        'data_list': self.database.get_contacts(message['user'])
                         }
-            response['data_list'] = self.database.get_contacts(message['user'])
-            logger.debug(f'process client message {response["data_list"]}')
+            logger.debug(f'Запрос контакт-листа get_contacts из БД: {response["data_list"]}')
             send_message(client, response)
             logger.debug(f'process client message sent message {send_message(client, response)}')
-
 
     # Если это добавление контакта
         elif 'action' in message and message['action'] == 'add' and 'account_name' in message and 'user' in message \
@@ -246,7 +246,7 @@ def config_load():
         return config
     else:
         config.add_section('SETTINGS')
-        config.set('SETTINGS', 'Default_port', str(DEFAULT_PORT))
+        config.set('SETTINGS', 'Default_port', str(7777))
         config.set('SETTINGS', 'Listen_Address', '')
         config.set('SETTINGS', 'Database_path', '')
         config.set('SETTINGS', 'Database_file', 'server_database.db3')
@@ -274,7 +274,7 @@ def main():
 
     # Инициализируем параметры в окна
     normal_status = QLabel()
-    normal_status.setPixmap(QPixmap("icon_ok.png"))
+    normal_status.setPixmap(QPixmap("img/icon_ok.png"))
     main_window.statusBar().addWidget(normal_status)
     main_window.statusBar().showMessage('       Сервер работает')
 

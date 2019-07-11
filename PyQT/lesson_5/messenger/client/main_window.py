@@ -2,16 +2,12 @@ from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtCore import pyqtSlot, Qt
 import sys
-import json
 import logging
 
 sys.path.append('../')
-from client.main_window_conv import UiMainClientWindow
-from client.add_contact import AddContactDialog
-from client.del_contact import DelContactDialog
-from client.database import ClientDatabase
-from client.transport import ClientTransport
-from client.start_dialog import UserNameDialog
+from main_window_conv import UiMainClientWindow
+from add_contact import AddContactDialog
+from del_contact import DelContactDialog
 from errors import ServerError
 
 logger = logging.getLogger('client')
@@ -154,6 +150,7 @@ class ClientMainWindow(QMainWindow):
         except OSError as err:
             if err.errno:
                 self.messages.critical(self, 'Ошибка', 'Потеряно соединение с сервером!')
+                logger.debug(f'Запуск функции add_contact, ошибка OSError')
                 self.close()
             self.messages.critical(self, 'Ошибка', 'Таймаут соединения! OSError add contact')
         else:

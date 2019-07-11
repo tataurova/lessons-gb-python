@@ -1,7 +1,7 @@
 import logging.handlers
 
 # путь до папки с логом
-CLIENT_LOG_FILE_PATH = 'log/client.log'
+CLIENT_LOG_FILE_PATH = 'client.log'
 
 # # Создаем именованный логгер с именем client
 client_logger = logging.getLogger('client')
@@ -9,7 +9,9 @@ client_logger = logging.getLogger('client')
 client_logger.setLevel(logging.DEBUG)
 
 # обработчик будет логгер, который пишет в файл
-client_handler = logging.FileHandler(CLIENT_LOG_FILE_PATH, encoding='utf-8')
+client_handler = logging.handlers.TimedRotatingFileHandler(CLIENT_LOG_FILE_PATH, encoding='utf-8', when='d')
+print(client_handler)
+
 # задаем уровень обработчика
 client_handler.setLevel(logging.DEBUG)
 

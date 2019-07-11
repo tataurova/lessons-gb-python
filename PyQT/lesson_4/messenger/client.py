@@ -308,6 +308,7 @@ def user_list_request(sock, username):
     ans = get_message(sock)
     if 'response' in ans and ans['response'] == 202:
         return ans['data_list']
+        logger.debug(f'Ответ на 202: {ans["data_list"]}')
     else:
         raise ServerError
 

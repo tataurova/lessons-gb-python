@@ -7,7 +7,7 @@ SERVER_LOG_FILE_PATH = 'log/server.log'
 server_logger = logging.getLogger('server')
 
 # Создаем обработчик с ротацией файлом по дням
-server_handler = logging.handlers.TimedRotatingFileHandler(SERVER_LOG_FILE_PATH, encoding='utf8', when='d')
+server_handler = logging.handlers.TimedRotatingFileHandler(SERVER_LOG_FILE_PATH, encoding='utf-8', when='d')
 server_handler.setLevel(logging.DEBUG)
 
 # Определяем Форматтер сообщения

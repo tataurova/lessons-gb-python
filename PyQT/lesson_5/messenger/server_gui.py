@@ -84,7 +84,7 @@ class MainWindow(QMainWindow):
         # Размер окна фиксирован.
         self.setFixedSize(800, 600)
         self.setWindowTitle('Сервер для обмена сообщениями')
-        self.setWindowIcon(QIcon('icon_messages.png'))
+        self.setWindowIcon(QIcon('img/icon_messages.png'))
 
         # Надпись о том, что ниже список подключённых клиентов
         self.label = QLabel('Список подключённых клиентов:', self)
@@ -109,7 +109,7 @@ class HistoryWindow(QDialog):
     def initUI(self):
         # Настройки окна:
         self.setWindowTitle('Статистика клиентов')
-        self.setWindowIcon(QIcon('icon_male.png'))
+        self.setWindowIcon(QIcon('img/icon_male.png'))
         self.setFixedSize(600, 700)
         self.setAttribute(Qt.WA_DeleteOnClose)
 
@@ -136,7 +136,7 @@ class ConfigWindow(QDialog):
         # Настройки окна
         self.setFixedSize(365, 260)
         self.setWindowTitle('Настройки сервера')
-        self.setWindowIcon(QIcon('icon_settings.png'))
+        self.setWindowIcon(QIcon('img/icon_settings.png'))
 
         # Надпись о файле базы данных:
         self.db_path_label = QLabel('Путь до файла базы данных: ', self)

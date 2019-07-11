@@ -264,7 +264,7 @@ class ServerStorage:
         # Возвращаем список кортежей
         return query.all()
 
-
+'''
 # Отладка
 if __name__ == '__main__':
     test_db = ServerStorage()
@@ -273,3 +273,4 @@ if __name__ == '__main__':
     print(test_db.users_list())
     test_db.process_message('McG2', '1111')
     print(test_db.message_history())
+'''
