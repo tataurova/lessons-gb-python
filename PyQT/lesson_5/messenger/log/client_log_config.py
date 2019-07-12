@@ -1,7 +1,9 @@
 import logging.handlers
+import sys
+
 
 # путь до папки с логом
-CLIENT_LOG_FILE_PATH = 'client.log'
+CLIENT_LOG_FILE_PATH = '../log/client.log'
 
 # # Создаем именованный логгер с именем client
 client_logger = logging.getLogger('client')
