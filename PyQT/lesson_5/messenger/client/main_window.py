@@ -3,10 +3,9 @@ from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtCore import pyqtSlot, Qt
 import logging
 
-#from main_window_conv import UiMainClientWindow
-#from add_contact import AddContactDialog
-#from del_contact import DelContactDialog
-from errors import ServerError
+from .main_window_conv import Ui_MainClientWindow
+from .add_contact import AddContactDialog
+from .del_contact import DelContactDialog
 
 logger = logging.getLogger('client')
 
@@ -20,7 +19,7 @@ class ClientMainWindow(QMainWindow):
         self.transport = transport
 
         # Загружаем конфигурацию окна из дизайнера
-        self.ui = UiMainClientWindow()
+        self.ui = Ui_MainClientWindow()
         self.ui.setupUi(self)
 
         # Кнопка "Выход"
@@ -182,9 +181,9 @@ class ClientMainWindow(QMainWindow):
             self.database.del_contact(selected)
             self.clients_list_update()
             logger.info(f'Успешно удалён контакт {selected}')
-            self.messages.information(self, 'Успех', 'Контакт успешно удалён.')
+            self.messages.information(self, 'Успех', 'Контакт успешно удалён')
             item.close()
-            # Если удалён активный пользователь, то деактивируем поля ввода.
+            # Если удалён активный пользователь, то деактивируем поля ввода
             if selected == self.current_chat:
                 self.current_chat = None
                 self.set_disabled_input()
@@ -243,10 +242,10 @@ class ClientMainWindow(QMainWindow):
                     self.set_active_user()
 
     # Слот потери соединения
-    # Выдаёт сообщение о ошибке и завершает работу приложения
+    # Выдаёт сообщение об ошибке и завершает работу приложения
     @pyqtSlot()
     def connection_lost(self):
-        self.messages.warning(self, 'Сбой соединения', 'Потеряно соединение с сервером. ')
+        self.messages.warning(self, 'Сбой соединения', 'Потеряно соединение с сервером')
         self.close()
 
     def make_connection(self, trans_obj):

@@ -175,11 +175,19 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 client.close()
             return
 
-        # Если это сообщение, то добавляем его в очередь сообщений. Ответ не требуется.
+        # Если это сообщение, то добавляем его в очередь сообщений.
         elif 'action' in message and message['action'] == 'message' and 'to' in message and 'time' in message \
                 and 'from' in message and 'mess_text' in message and self.names[message['from']] == client:
-            self.messages.append(message)
-            self.database.process_message(message['from'], message['to'])
+            if message['to'] in self.names:
+                self.messages.append(message)
+                self.database.process_message(message['from'], message['to'])
+                send_message(client, {'response': 200})
+            else:
+                response = {
+                    'response': 400,
+                    'error': 'Пользователь не зарегистрирован на сервере'
+                }
+                send_message(client, response)
             return
 
         # Если клиент выходит
@@ -198,11 +206,12 @@ class Server(threading.Thread, metaclass=ServerMaker):
         elif 'action' in message and message['action'] == 'get_contacts' and 'user' in message and self.names[message['user']] == client:
             response = {
                         'response': 202,
-                        'data_list': self.database.get_contacts(message['user'])
+                        'data_list': None
                         }
-            logger.debug(f'Запрос контакт-листа get_contacts из БД {self.database}: {response["data_list"]}')
+            response['data_list'] = self.database.get_contacts(message['user'])
+            logger.debug(f'Запрос контакт-листа get_contacts из БД 202 {self.database}: {response["data_list"]}')
             send_message(client, response)
-            logger.debug(f'process client message send message {send_message(client, response)}')
+            logger.debug(f'process client message send message {response}')
 
     # Если это добавление контакта
         elif 'action' in message and message['action'] == 'add' and 'account_name' in message and 'user' in message \
@@ -217,9 +226,11 @@ class Server(threading.Thread, metaclass=ServerMaker):
             send_message(client, {'response': 200})
 
     # Если это запрос известных пользователей
-        elif 'action' in message and message['action'] == 'get_users' and 'account_name' in message \
-             and self.names[message['account_name']] == client:
-            response = {'response': 202}
+        elif 'action' in message and message['action'] == 'get_users' and 'account_name' in message and self.names[message['account_name']] == client:
+            response = {
+                'response': 202,
+                'data_list': None
+            }
             response['data_list'] = [user[0] for user in self.database.users_list()]
             send_message(client, response)
 
@@ -228,9 +239,10 @@ class Server(threading.Thread, metaclass=ServerMaker):
             response = {
             'response': 400,
             'error': 'Запрос некорректен'
-        }
+            }
             send_message(client, response)
             return
+
 
 @log
 def config_load():
@@ -279,12 +291,11 @@ def main():
     main_window.statusBar().addWidget(normal_status)
     main_window.statusBar().showMessage('       Сервер работает')
 
-
     main_window.active_clients_table.setModel(gui_create_model(database))
     main_window.active_clients_table.resizeColumnsToContents()
     main_window.active_clients_table.resizeRowsToContents()
 
-    # Функция, обновляющяя список подключённых, проверяет флаг подключения, и если надо, обновляет список
+    # Функция, обновляющяя список подключенных, проверяет флаг подключения, и если надо, обновляет список
     def list_update():
         global new_connection
         if new_connection:
@@ -303,7 +314,7 @@ def main():
         stat_window.history_table.resizeRowsToContents()
         stat_window.show()
 
-    # Функция, создающяя окно с настройками сервера.
+    # Функция, создающяя окно с настройками сервера
     def server_config():
         global config_window
         # Создаём окно и заносим в него текущие параметры

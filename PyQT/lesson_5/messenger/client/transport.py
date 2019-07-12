@@ -1,44 +1,16 @@
 import socket
-import sys
 import time
 import logging
-import json
 import threading
 from PyQt5.QtCore import pyqtSignal, QObject
 
-sys.path.append('../')
-from errors import ServerError
-from utils import *
-from errors import IncorrectDataRecivedError, NonDictInputError
+from .errors import ServerError
+from .utils import *
 
 
 # Логер и объект блокировки для работы с сокетом.
 logger = logging.getLogger('client')
 socket_lock = threading.Lock()
-
-
-def get_message(client):
-    encoded_response = client.recv(1024)
-    if isinstance(encoded_response, bytes):
-        json_response = encoded_response.decode('utf-8')
-        response = json.loads(json_response)
-        if isinstance(response, dict):
-            return response
-        else:
-            raise IncorrectDataRecivedError
-    else:
-        raise IncorrectDataRecivedError
-
-
-# Утилита кодирования и отправки сообщения
-# принимает словарь и отправляет его
-
-def send_message(sock, message):
-    if not isinstance(message, dict):
-        raise NonDictInputError
-    js_message = json.dumps(message)
-    encoded_message = js_message.encode('utf-8')
-    sock.send(encoded_message)
 
 
 # Класс - транспорт, отвечает за взаимодействие с сервером
@@ -72,9 +44,9 @@ class ClientTransport(threading.Thread, QObject):
                 raise ServerError('Потеряно соединение с сервером!')
             logger.error('Timeout соединения при обновлении списков пользователей')
         except json.JSONDecodeError:
-            logger.critical(f'Потеряно соединение с сервером')
+            logger.critical(f'Потеряно соединение с сервером JSONDecodeError')
             raise ServerError('Потеряно соединение с сервером!')
-            # Флаг продолжения работы транспорта.
+            # Флаг продолжения работы транспорта
         self.running = True
 
     # Функция инициализации соединения с сервером
@@ -82,7 +54,7 @@ class ClientTransport(threading.Thread, QObject):
         # Инициализация сокета и сообщение серверу о нашем появлении
         self.transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-        # Таймаут необходим для освобождения сокета.
+        # Таймаут необходим для освобождения сокета
         self.transport.settimeout(5)
 
         # Соединяемся, 5 попыток соединения, флаг успеха ставим в True, если удалось
@@ -98,24 +70,24 @@ class ClientTransport(threading.Thread, QObject):
                 break
             time.sleep(1)
 
-        # Если соединится не удалось - исключение
+        # Если соединиться не удалось - исключение
         if not connected:
-            logger.critical('Не удалось установить соединение с сервером')
+            logger.critical('Не удалось установить соединение с сервером Not connected Server Error')
             raise ServerError('Не удалось установить соединение с сервером')
 
         logger.debug('Установлено соединение с сервером')
 
-        # Посылаем серверу приветственное сообщение и получаем ответ, что всё нормально или ловим исключение.
+        # Посылаем серверу приветственное сообщение и получаем ответ, что всё нормально или ловим исключение
         try:
             with socket_lock:
                 send_message(self.transport, self.create_presence())
                 self.process_server_ans(get_message(self.transport))
         except (OSError, json.JSONDecodeError):
-            logger.critical('Потеряно соединение с сервером!')
+            logger.critical(f'Потеряно соединение с сервером! JSONDecodeError {self.process_server_ans(get_message(self.transport))}')
             raise ServerError('Потеряно соединение с сервером!')
 
         # Раз всё хорошо, сообщение о установке соединения.
-        logger.info('Соединение с сервером успешно установлено.')
+        logger.info('Соединение с сервером успешно установлено')
 
     # Функция, генерирующая приветственное сообщение для сервера
     def create_presence(self):
@@ -126,10 +98,10 @@ class ClientTransport(threading.Thread, QObject):
                 'account_name': self.username
             }
         }
-        logger.debug(f'Сформировано {"presence"} сообщение для пользователя {self.username}')
+        logger.debug(f'Сформировано {out} сообщение пользователя {self.username}')
         return out
 
-    # Функция обрабатывающяя сообщения от сервера. Ничего не возращает. Генерирует исключение при ошибке.
+    # Функция, обрабатывающяя сообщения от сервера. Ничего не возращает. Генерирует исключение при ошибке.
     def process_server_ans(self, message):
         logger.debug(f'Разбор сообщения от сервера: {message}')
 
@@ -142,7 +114,7 @@ class ClientTransport(threading.Thread, QObject):
             else:
                 logger.debug(f'Принят неизвестный код подтверждения {message["response"]}')
 
-        # Если это сообщение от пользователя добавляем в базу, даём сигнал о новом сообщении
+        # Если это сообщение от пользователя, добавляем в базу, даём сигнал о новом сообщении
         elif 'action' in message and message['action'] == 'message' and 'from' in message and 'to' in message \
                 and 'mess_text' in message and message['to'] == self.username:
             logger.debug(f'Получено сообщение от пользователя {message["from"]}:{message["mess_text"]}')
@@ -165,8 +137,9 @@ class ClientTransport(threading.Thread, QObject):
         if 'response' in ans and ans['response'] == 202:
             for contact in ans['data_list']:
                 self.database.add_contact(contact)
+                logger.info(f'Контакты {contact} добавлены в БД')
         else:
-            logger.error('Не удалось обновить список контактов.')
+            logger.error('Не удалось обновить список контактов')
 
     # Функция обновления таблицы известных пользователей
     def user_list_update(self):
@@ -181,8 +154,9 @@ class ClientTransport(threading.Thread, QObject):
             ans = get_message(self.transport)
         if 'response' in ans and ans['response'] == 202:
             self.database.add_users(ans['data_list'])
+            logger.info(f'Таблица известных пользователей {ans["data_list"]} добавлена в БД')
         else:
-            logger.error('Не удалось обновить список известных пользователей.')
+            logger.error('Не удалось обновить список известных пользователей')
 
     # Функция, сообщающая на сервер о добавлении нового контакта
     def add_contact(self, contact):
@@ -223,7 +197,7 @@ class ClientTransport(threading.Thread, QObject):
                 send_message(self.transport, message)
             except OSError:
                 pass
-        logger.debug('Транспорт завершает работу.')
+        logger.debug('Транспорт завершает работу')
         time.sleep(0.5)
 
     # Функция отправки сообщения на сервер

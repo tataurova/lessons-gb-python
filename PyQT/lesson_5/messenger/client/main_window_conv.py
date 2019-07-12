@@ -6,10 +6,11 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtGui import QIcon
 
 
-class UiMainClientWindow(object):
+class Ui_MainClientWindow(object):
     def setupUi(self, MainClientWindow):
         MainClientWindow.setObjectName("MainClientWindow")
         MainClientWindow.resize(756, 534)
@@ -77,7 +78,7 @@ class UiMainClientWindow(object):
 
     def retranslateUi(self, MainClientWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainClientWindow.setWindowTitle(_translate("MainClientWindow", "Чат Программа alpha release"))
+        MainClientWindow.setWindowTitle(_translate("MainClientWindow", "Мессенджер Клиент"))
         self.label_contacts.setText(_translate("MainClientWindow", "Список контактов:"))
         self.btn_add_contact.setText(_translate("MainClientWindow", "Добавить контакт"))
         self.btn_remove_contact.setText(_translate("MainClientWindow", "Удалить контакт"))
