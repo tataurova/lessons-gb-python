@@ -1,4 +1,3 @@
-import logging
 import argparse
 import sys
 from PyQt5.QtWidgets import QApplication
@@ -9,6 +8,7 @@ from client.transport import ClientTransport
 from client.start_dialog import UserNameDialog
 from log.client_log_config import *
 from log.decorators import Log
+import logging
 
 # Инициализация клиентского логера
 logger = logging.getLogger('client')

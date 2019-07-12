@@ -2,10 +2,14 @@ from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtCore import pyqtSlot, Qt
 import logging
+import sys
 
-from .main_window_conv import Ui_MainClientWindow
-from .add_contact import AddContactDialog
-from .del_contact import DelContactDialog
+sys.path.append('../')
+
+from client.main_window_conv import Ui_MainClientWindow
+from client.add_contact import AddContactDialog
+from client.del_contact import DelContactDialog
+from client.errors import ServerError
 
 logger = logging.getLogger('client')
 
@@ -54,7 +58,7 @@ class ClientMainWindow(QMainWindow):
     # Деактивировать поля ввода
     def set_disabled_input(self):
         # Надпись  - получатель
-        self.ui.label_new_message.setText('Для выбора получателя дважды кликните на нем в окне контактов.')
+        self.ui.label_new_message.setText('Для выбора получателя дважды кликните на нем в окне контактов')
         self.ui.text_message.clear()
         if self.history_model:
             self.history_model.clear()
@@ -86,14 +90,14 @@ class ClientMainWindow(QMainWindow):
             if item[1] == 'in':
                 mess = QStandardItem(f'Входящее от {item[3].replace(microsecond=0)}:\n {item[2]}')
                 mess.setEditable(False)
-                mess.setBackground(QBrush(QColor(255, 213, 213)))
+                mess.setBackground(QBrush(QColor(219, 240, 195)))
                 mess.setTextAlignment(Qt.AlignLeft)
                 self.history_model.appendRow(mess)
             else:
                 mess = QStandardItem(f'Исходящее от {item[3].replace(microsecond=0)}:\n {item[2]}')
                 mess.setEditable(False)
                 mess.setTextAlignment(Qt.AlignRight)
-                mess.setBackground(QBrush(QColor(204, 255, 204)))
+                mess.setBackground(QBrush(QColor(231, 248, 213)))
                 self.history_model.appendRow(mess)
         self.ui.list_messages.scrollToBottom()
 

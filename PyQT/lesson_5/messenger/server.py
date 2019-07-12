@@ -3,8 +3,8 @@ import select
 from log.descriptors import Port
 from metaclasses import ServerMaker
 import sys
-import os
 import logging
+import os
 import argparse
 import configparser
 import threading
@@ -154,7 +154,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
         # Если это сообщение о присутствии, принимаем и отвечаем
         if 'action' in message and message['action'] == 'presence' and 'time' in message and 'user' in message:
             # Если такой пользователь ещё не зарегистрирован, регистрируем, иначе отправляем ответ и завершаем
-            # соединение.
+            # соединение
             if message['user']['account_name'] not in self.names.keys():
                 self.names[message['user']['account_name']] = client
                 client_ip, client_port = client.getpeername()

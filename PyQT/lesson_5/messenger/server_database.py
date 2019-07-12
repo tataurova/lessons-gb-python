@@ -1,9 +1,9 @@
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey, DateTime
 from sqlalchemy.orm import mapper, sessionmaker
 import datetime
-import logging
 from log.server_log_config import *
 from log.decorators import Log
+import logging
 
 # Инициализация логирования сервера.
 logger = logging.getLogger('server')
@@ -240,7 +240,7 @@ class ServerStorage:
         # Возвращаем список кортежей
         return query.all()
 
-    # Функция возвращает список контактов пользователя.
+    # Функция возвращает список контактов пользователя
     def get_contacts(self, username):
         # Запрашивааем указанного пользователя
         user = self.session.query(self.AllUsers).filter_by(name=username).one()
@@ -263,14 +263,3 @@ class ServerStorage:
         ).join(self.AllUsers)
         # Возвращаем список кортежей
         return query.all()
-
-'''
-# Отладка
-if __name__ == '__main__':
-    test_db = ServerStorage()
-    test_db.user_login('1111', '192.168.1.113', 8080)
-    test_db.user_login('McG2', '192.168.1.113', 8081)
-    print(test_db.users_list())
-    test_db.process_message('McG2', '1111')
-    print(test_db.message_history())
-'''

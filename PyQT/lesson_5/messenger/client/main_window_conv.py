@@ -33,7 +33,7 @@ class Ui_MainClientWindow(object):
         self.text_message.setGeometry(QtCore.QRect(300, 360, 441, 71))
         self.text_message.setObjectName("text_message")
         self.label_new_message = QtWidgets.QLabel(self.centralwidget)
-        self.label_new_message.setGeometry(QtCore.QRect(300, 330, 450, 16)) # Правка тут
+        self.label_new_message.setGeometry(QtCore.QRect(300, 330, 450, 16))
         self.label_new_message.setObjectName("label_new_message")
         self.list_contacts = QtWidgets.QListView(self.centralwidget)
         self.list_contacts.setGeometry(QtCore.QRect(10, 20, 251, 411))
@@ -79,6 +79,7 @@ class Ui_MainClientWindow(object):
     def retranslateUi(self, MainClientWindow):
         _translate = QtCore.QCoreApplication.translate
         MainClientWindow.setWindowTitle(_translate("MainClientWindow", "Мессенджер Клиент"))
+        MainClientWindow.setWindowIcon(QIcon('img/icon_messages.png'))
         self.label_contacts.setText(_translate("MainClientWindow", "Список контактов:"))
         self.btn_add_contact.setText(_translate("MainClientWindow", "Добавить контакт"))
         self.btn_remove_contact.setText(_translate("MainClientWindow", "Удалить контакт"))
